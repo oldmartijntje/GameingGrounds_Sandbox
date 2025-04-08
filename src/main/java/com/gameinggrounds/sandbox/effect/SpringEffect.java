@@ -9,8 +9,8 @@ import net.minecraft.util.math.BlockPos;
 
 // Climbing Effect by SameDifferent: https://github.com/samedifferent/TrickOrTreat/blob/master/LICENSE
 // MIT License!
-public class SpleefEffect extends StatusEffect {
-    public SpleefEffect(StatusEffectCategory category, int color) {
+public class SpringEffect extends StatusEffect {
+    public SpringEffect(StatusEffectCategory category, int color) {
         super(category, color);
     }
 
