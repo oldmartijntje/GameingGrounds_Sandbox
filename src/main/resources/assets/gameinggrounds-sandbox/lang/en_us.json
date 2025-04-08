@@ -1,0 +1,36 @@
+﻿{
+  "item.gameinggrounds-sandbox.drill": "Bedrock Drill",
+
+  "item.gameinggrounds-sandbox.kitsune_maison_music_disc": "§bMusic Disc",
+  "item.gameinggrounds-sandbox.kitsune_maison_music_disc.desc": "Porter Robinson - Kitsune Maison",
+
+  "item.gameinggrounds-sandbox.cool_hammer": "Cool Hammer",
+
+  "item.minecraft.potion.effect.spleef_potion_wood": "Wooden Spleef Potion",
+  "item.minecraft.splash_potion.effect.spleef_potion_wood": "Wooden Spleef Splash Potion",
+  "item.minecraft.lingering_potion.effect.spleef_potion_wood": "Wooden Spleef Lingering Potion",
+  "item.minecraft.potion.effect.spleef_potion_stone": "Stone Spleef Potion",
+  "item.minecraft.splash_potion.effect.spleef_potion_stone": "Stone Spleef Splash Potion",
+  "item.minecraft.lingering_potion.effect.spleef_potion_stone": "Stone Spleef Lingering Potion",
+  "item.minecraft.potion.effect.spleef_potion_iron": "Iron Spleef Potion",
+  "item.minecraft.splash_potion.effect.spleef_potion_iron": "Iron Spleef Splash Potion",
+  "item.minecraft.lingering_potion.effect.spleef_potion_iron": "Iron Spleef Lingering Potion",
+  "item.minecraft.potion.effect.spleef_potion_diamond": "Diamond Spleef Potion",
+  "item.minecraft.splash_potion.effect.spleef_potion_diamond": "Diamond Spleef Splash Potion",
+  "item.minecraft.lingering_potion.effect.spleef_potion_diamond": "Diamond Spleef Lingering Potion",
+  "item.minecraft.potion.effect.spleef_potion_netherite": "Netherite Spleef Potion",
+  "item.minecraft.splash_potion.effect.spleef_potion_netherite": "Netherite Spleef Splash Potion",
+  "item.minecraft.lingering_potion.effect.spleef_potion_netherite": "Netherite Spleef Lingering Potion",
+
+  "effect.gameinggrounds-sandbox.spleef": "Spleef",
+
+  "enchantment.gameinggrounds-sandbox.limbo": "Limbo",
+
+  "itemgroup.gameinggrounds-sandbox.all_items": "GameingGrounds Sandbox Items",
+
+  "tooltip.gameinggrounds-sandbox.drill": "Use it to remove §lBedrock§r.",
+  "tooltip.gameinggrounds-sandbox.drill.1": "Hold §e§l[Shift]§r to read more information.",
+  "tooltip.gameinggrounds-sandbox.drill.shift_down": "When crafted, has §e2 / 32§r charges.",
+  "tooltip.gameinggrounds-sandbox.drill.shift_down.1": "Use it on §4TNT§r to recharge 1 damage.",
+  "tooltip.sandbox.drill.shift_down.2": "§l2 charges§r are needed per block of bedrock."
+}

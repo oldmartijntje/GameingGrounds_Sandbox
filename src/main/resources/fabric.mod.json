@@ -20,7 +20,8 @@
 		],
 		"fabric-datagen": [
 			"com.gameinggrounds.sandbox.GameingGroundsSandboxDataGenerator"
-		]
+		],
+		"client": ["com.gameinggrounds.sandbox.GameingGroundsSandboxClient"]
 	},
 	"mixins": [
 		"gameinggrounds-sandbox.mixins.json"

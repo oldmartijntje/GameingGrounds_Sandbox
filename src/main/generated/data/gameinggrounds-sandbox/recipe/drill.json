@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": {
+      "item": "minecraft:oak_trapdoor"
+    },
+    "L": {
+      "item": "minecraft:lever"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "P": {
+      "item": "minecraft:piston"
+    },
+    "S": {
+      "item": "minecraft:smooth_stone"
+    },
+    "T": {
+      "item": "minecraft:tnt"
+    }
+  },
+  "pattern": [
+    " T ",
+    "TSL",
+    "POD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "gameinggrounds-sandbox:drill"
+  }
+}
