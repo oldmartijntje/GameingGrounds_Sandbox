@@ -5,6 +5,8 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 
 // Climbing Effect by SameDifferent: https://github.com/samedifferent/TrickOrTreat/blob/master/LICENSE
@@ -17,21 +19,13 @@ public class SpringEffect extends StatusEffect {
     @Override
     public boolean applyUpdateEffect(LivingEntity entity, int amplifier) {
         if (entity.getWorld() instanceof ServerWorld serverWorld) {
-            BlockPos beneathPos = entity.getBlockPos().down();
-            BlockState beneathBlock = serverWorld.getBlockState(beneathPos);
+            entity.fallDistance = 0.0F;
+            BlockPos entityPos = entity.getBlockPos();
 
-            if (!beneathBlock.isAir()) {
-                serverWorld.breakBlock(beneathPos, true);
-                boolean limitFound = false;
-                for (int i = 0; i < Math.floor(amplifier / 5f); i++) {
-                    beneathPos = beneathPos.down();
-                    beneathBlock = serverWorld.getBlockState(beneathPos);
-                    if (!beneathBlock.isAir() && !limitFound) {
-                        serverWorld.breakBlock(beneathPos, true);
-                    } else {
-                        limitFound = true;
-                    }
-                }
+            if (entity.isOnGround()) {
+                serverWorld.playSound(null, entityPos, SoundEvents.ENTITY_BEE_HURT, SoundCategory.PLAYERS, 1.0F, 1.0F);
+                entity.addVelocity(0, (amplifier /2F) + 0.2F, 0);
+                entity.velocityModified = true;
             }
         }
 
@@ -40,8 +34,6 @@ public class SpringEffect extends StatusEffect {
 
     @Override
     public boolean canApplyUpdateEffect(int duration, int amplifier) {
-//        amplifier = 1;
-        int safeAmplifier = Math.max(amplifier, 1);
-        return duration % Math.max(1, Math.round(50f / (safeAmplifier + 1))) == 0;
+        return true;
     }
 }
