@@ -51,6 +51,9 @@ public class ModItems {
     public static final Item QUESTIONABLE_SMITHING_TEMPLATE = registerItem("questionable_armor_trim_smithing_template",
             SmithingTemplateItem.of(Identifier.of(GameingGroundsSandbox.MOD_ID, "questionable"), FeatureFlags.VANILLA));
 
+    public static final Item FURY_SMITHING_TEMPLATE = registerItem("fury_armor_trim_smithing_template",
+            SmithingTemplateItem.of(Identifier.of(GameingGroundsSandbox.MOD_ID, "fury"), FeatureFlags.VANILLA));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(GameingGroundsSandbox.MOD_ID, name), item);
     }

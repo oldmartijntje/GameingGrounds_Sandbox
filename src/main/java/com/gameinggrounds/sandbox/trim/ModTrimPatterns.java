@@ -16,8 +16,12 @@ public class ModTrimPatterns {
     public static final RegistryKey<ArmorTrimPattern> QUESTIONABLE = RegistryKey.of(RegistryKeys.TRIM_PATTERN,
             Identifier.of(GameingGroundsSandbox.MOD_ID, "questionable"));
 
+    public static final RegistryKey<ArmorTrimPattern> FURY = RegistryKey.of(RegistryKeys.TRIM_PATTERN,
+            Identifier.of(GameingGroundsSandbox.MOD_ID, "fury"));
+
     public static void bootstrap(Registerable<ArmorTrimPattern> context) {
         register(context, ModItems.QUESTIONABLE_SMITHING_TEMPLATE, QUESTIONABLE);
+        register(context, ModItems.FURY_SMITHING_TEMPLATE, FURY);
     }
 
     private static void register(Registerable<ArmorTrimPattern> context, Item item, RegistryKey<ArmorTrimPattern> key) {

@@ -39,5 +39,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(recipeExporter);
 
         offerSmithingTrimRecipe(recipeExporter, ModItems.QUESTIONABLE_SMITHING_TEMPLATE, Identifier.of(GameingGroundsSandbox.MOD_ID, "questionable"));
+        offerSmithingTrimRecipe(recipeExporter, ModItems.FURY_SMITHING_TEMPLATE, Identifier.of(GameingGroundsSandbox.MOD_ID, "fury"));
     }
 }

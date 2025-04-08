@@ -37,7 +37,9 @@
         "trims/models/armor/host",
         "trims/models/armor/host_leggings",
         "gameinggrounds-sandbox:trims/models/armor/questionable",
-        "gameinggrounds-sandbox:trims/models/armor/questionable_leggings"
+        "gameinggrounds-sandbox:trims/models/armor/questionable_leggings",
+        "gameinggrounds-sandbox:trims/models/armor/fury",
+        "gameinggrounds-sandbox:trims/models/armor/fury_leggings"
 
       ],
       "palette_key": "trims/color_palettes/trim_palette",
