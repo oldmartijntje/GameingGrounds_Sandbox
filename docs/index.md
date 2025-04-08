@@ -10,3 +10,5 @@ This is a mod for [Fabric](https://fabricmc.net/) that is currently only made fo
 - [Modrinth](https://modrinth.com/project/gameinggrounds-sandbox)
 
 This wiki is made with [obsidian](https://obsidian.md/), for complete browsing experience, we advice to browse it with this app.
+
+it'll do for now, and if this mod gets big or attracts people I'll just move it to a seperate repo with my [obsidian hosting framework](https://quartz.jzhao.xyz/).
