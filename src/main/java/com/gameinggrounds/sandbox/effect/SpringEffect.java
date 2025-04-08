@@ -1,6 +1,7 @@
 package com.gameinggrounds.sandbox.effect;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.EntityPose;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
@@ -21,10 +22,16 @@ public class SpringEffect extends StatusEffect {
         if (entity.getWorld() instanceof ServerWorld serverWorld) {
             entity.fallDistance = 0.0F;
             BlockPos entityPos = entity.getBlockPos();
+            BlockPos headPos = entity.getBlockPos().up((int) entity.getEyeHeight(EntityPose.STANDING) + 1);
+            BlockState blockAbove = serverWorld.getBlockState(headPos);
 
             if (entity.isOnGround()) {
                 serverWorld.playSound(null, entityPos, SoundEvents.ENTITY_BEE_HURT, SoundCategory.PLAYERS, 1.0F, 1.0F);
                 entity.addVelocity(0, (amplifier /2F) + 0.2F, 0);
+                entity.velocityModified = true;
+            } else if (!blockAbove.isAir()) {
+                serverWorld.playSound(null, entityPos, SoundEvents.ENTITY_BEE_HURT, SoundCategory.PLAYERS, 1.0F, 1.0F);
+                entity.addVelocity(0, -(((amplifier / 2F) + 0.2F) + entity.getVelocity().y), 0);
                 entity.velocityModified = true;
             }
         }
