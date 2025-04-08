@@ -1,7 +1,7 @@
 
 This armor trim is [[Release 1.0.0|currently]] uncraftable.
 
-![img](https://i.imgur.com/OjUr8dO.png)
+![128](https://i.imgur.com/OjUr8dO.png)
 
 This is what it looks like when worn by a player:
 
