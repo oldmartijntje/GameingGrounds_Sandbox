@@ -19,6 +19,12 @@ public class ModItemGroups {
                         entries.add(ModItems.DRILL);
 
                         entries.add(ModItems.COOL_HAMMER);
+                        entries.add(ModItems.WOOD_SLIME_SWORD);
+                        entries.add(ModItems.STONE_SLIME_SWORD);
+                        entries.add(ModItems.IRON_SLIME_SWORD);
+                        entries.add(ModItems.GOLD_SLIME_SWORD);
+                        entries.add(ModItems.DIAMOND_SLIME_SWORD);
+                        entries.add(ModItems.NETHERITE_SLIME_SWORD);
 
                         entries.add(ModItems.KITSUNE_MAISON_MUSIC_DISC);
                         entries.add(ModItems.QUESTIONABLE_SMITHING_TEMPLATE);

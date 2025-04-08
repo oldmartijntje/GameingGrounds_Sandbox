@@ -25,6 +25,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.KITSUNE_MAISON_MUSIC_DISC, Models.GENERATED);
         itemModelGenerator.register(ModItems.QUESTIONABLE_SMITHING_TEMPLATE, Models.GENERATED);
         itemModelGenerator.register(ModItems.FURY_SMITHING_TEMPLATE, Models.GENERATED);
-
+        itemModelGenerator.register(ModItems.WOOD_SLIME_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.STONE_SLIME_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.IRON_SLIME_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.GOLD_SLIME_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.DIAMOND_SLIME_SWORD, Models.HANDHELD);
     }
 }
