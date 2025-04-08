@@ -5,6 +5,7 @@ build/
 out/
 classes/
 .cache/
+.obsidian/
 # eclipse
 
 *.launch
