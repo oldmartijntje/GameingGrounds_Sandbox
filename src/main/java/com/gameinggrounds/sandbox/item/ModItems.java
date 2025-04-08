@@ -22,6 +22,26 @@ public class ModItems {
             new HammerItem(ToolMaterials.IRON, new Item.Settings()
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.IRON, 7, -3.4f))));
 
+    public static final Item WOOD_SLIME_SWORD = registerItem("wood_slime_sword",
+            new SwordItem(ToolMaterials.WOOD, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.WOOD, 0, -2.4f))));
+
+    public static final Item STONE_SLIME_SWORD = registerItem("stone_slime_sword",
+            new SwordItem(ToolMaterials.STONE, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.STONE, 0, -1.4f))));
+
+    public static final Item IRON_SLIME_SWORD = registerItem("iron_slime_sword",
+            new SwordItem(ToolMaterials.IRON, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.IRON, 0, -0.7f))));
+
+    public static final Item GOLD_SLIME_SWORD = registerItem("gold_slime_sword",
+            new SwordItem(ToolMaterials.GOLD, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.GOLD, 0, -0.4f))));
+
+    public static final Item DIAMOND_SLIME_SWORD = registerItem("diamond_slime_sword",
+            new SwordItem(ToolMaterials.DIAMOND, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.DIAMOND, 0, -0.1f))));
+
     public static final Item KITSUNE_MAISON_MUSIC_DISC = registerItem("kitsune_maison_music_disc",
             new Item( new Item.Settings().jukeboxPlayable(ModSounds.KITSUNE_MAISON_KEY).maxCount(1)));
 
