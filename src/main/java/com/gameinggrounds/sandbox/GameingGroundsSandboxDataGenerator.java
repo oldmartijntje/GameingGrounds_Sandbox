@@ -2,6 +2,7 @@ package com.gameinggrounds.sandbox;
 
 import com.gameinggrounds.sandbox.datagen.*;
 import com.gameinggrounds.sandbox.enchantment.ModEnchantments;
+import com.gameinggrounds.sandbox.trim.ModTrimPatterns;
 import com.gameinggrounds.sandbox.world.ModConfiguredFeatures;
 import com.gameinggrounds.sandbox.world.ModPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -27,5 +28,6 @@ public class GameingGroundsSandboxDataGenerator implements DataGeneratorEntrypoi
 		registryBuilder.addRegistry(RegistryKeys.ENCHANTMENT, ModEnchantments::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.TRIM_PATTERN, ModTrimPatterns::bootstrap);
 	}
 }

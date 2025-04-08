@@ -21,6 +21,7 @@
   "item.minecraft.potion.effect.spleef_potion_netherite": "Netherite Spleef Potion",
   "item.minecraft.splash_potion.effect.spleef_potion_netherite": "Netherite Spleef Splash Potion",
   "item.minecraft.lingering_potion.effect.spleef_potion_netherite": "Netherite Spleef Lingering Potion",
+  "item.gameinggrounds-sandbox.questionable_armor_trim_smithing_template": "Questionable Armor Trim",
 
   "effect.gameinggrounds-sandbox.spleef": "Spleef",
 
@@ -34,6 +35,8 @@
   "painting.gameinggrounds-sandbox.forgplort.author": "OldMartijntje",
   "painting.gameinggrounds-sandbox.psychedelic.title": "Psychedelic",
   "painting.gameinggrounds-sandbox.psychedelic.author": "OldMartijntje",
+
+  "trim_pattern.gameinggrounds-sandbox.questionable": "Questionable Armor Pattern",
 
   "tooltip.gameinggrounds-sandbox.drill": "Use it to remove §lBedrock§r.",
   "tooltip.gameinggrounds-sandbox.drill.1": "Hold §e§l[Shift]§r to read more information.",

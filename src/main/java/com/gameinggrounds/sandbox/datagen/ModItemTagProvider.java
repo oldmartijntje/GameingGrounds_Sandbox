@@ -1,5 +1,6 @@
 package com.gameinggrounds.sandbox.datagen;
 
+import com.gameinggrounds.sandbox.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.item.Items;
@@ -24,6 +25,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ItemTags.SHOVELS);
 
         getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR);
+
+        getOrCreateTagBuilder(ItemTags.TRIM_TEMPLATES)
+                .add(ModItems.QUESTIONABLE_SMITHING_TEMPLATE);
 
         getOrCreateTagBuilder(ItemTags.TRIM_MATERIALS);
 
