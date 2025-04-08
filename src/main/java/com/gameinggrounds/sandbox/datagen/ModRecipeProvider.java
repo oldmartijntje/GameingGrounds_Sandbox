@@ -44,6 +44,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("SSS")
                         .input('S', Items.SLIME_BALL)
                         .input('I', Items.WOODEN_SWORD)
+                .criterion(hasItem(Items.SLIME_BALL), conditionsFromItem(Items.SLIME_BALL))
                         .offerTo(recipeExporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.STONE_SLIME_SWORD, 1)
@@ -52,6 +53,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("SSS")
                         .input('S', Items.SLIME_BALL)
                         .input('I', Items.STONE_SWORD)
+                .criterion(hasItem(Items.SLIME_BALL), conditionsFromItem(Items.SLIME_BALL))
                         .offerTo(recipeExporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.IRON_SLIME_SWORD, 1)
@@ -60,6 +62,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("SSS")
                         .input('S', Items.SLIME_BALL)
                         .input('I', Items.IRON_SWORD)
+                .criterion(hasItem(Items.SLIME_BALL), conditionsFromItem(Items.SLIME_BALL))
                         .offerTo(recipeExporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.GOLD_SLIME_SWORD, 1)
@@ -68,6 +71,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("SSS")
                         .input('S', Items.SLIME_BALL)
                         .input('I', Items.GOLDEN_SWORD)
+                .criterion(hasItem(Items.SLIME_BALL), conditionsFromItem(Items.SLIME_BALL))
                         .offerTo(recipeExporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.DIAMOND_SLIME_SWORD, 1)
@@ -76,6 +80,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("SSS")
                         .input('S', Items.SLIME_BALL)
                         .input('I', Items.DIAMOND_SWORD)
+                .criterion(hasItem(Items.SLIME_BALL), conditionsFromItem(Items.SLIME_BALL))
                         .offerTo(recipeExporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.NETHERITE_SLIME_SWORD, 1)
@@ -84,6 +89,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("SSS")
                         .input('S', Items.SLIME_BALL)
                         .input('I', Items.NETHERITE_SWORD)
+                .criterion(hasItem(Items.SLIME_BALL), conditionsFromItem(Items.SLIME_BALL))
                         .offerTo(recipeExporter);
         offerNetheriteUpgradeRecipe(recipeExporter, ModItems.DIAMOND_SLIME_SWORD, RecipeCategory.COMBAT, ModItems.NETHERITE_SLIME_SWORD);
 
