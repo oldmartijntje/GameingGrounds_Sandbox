@@ -1,3 +1,7 @@
+- Added in version: [[Release 1.0.0|Release 1.0.0]].
+
+These swords add a lot of [knockback](https://minecraft.wiki/w/Knockback) (depending on the sword material) and will give the entity hit with it the [oozing](https://minecraft.wiki/w/Oozing) effect.
+
 | Name                  | Texture                                 |
 | --------------------- | --------------------------------------- |
 | Wooden Slime Sword    | ![img](https://i.imgur.com/mPIdoVh.png) |

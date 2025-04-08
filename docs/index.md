@@ -9,4 +9,4 @@ This is a mod for [Fabric](https://fabricmc.net/) that is currently only made fo
 **Downloads**
 - [Modrinth](https://modrinth.com/project/gameinggrounds-sandbox)
 
-
+This wiki is made with [obsidian](https://obsidian.md/), for complete browsing experience, we advice to browse it with this app.

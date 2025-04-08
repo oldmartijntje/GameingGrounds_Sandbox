@@ -7,3 +7,5 @@ Icon:
 
 >- Springy potion by Mielesgames
 
+This potion was added in [[Release 1.0.0|Release 1.0.0]]
+

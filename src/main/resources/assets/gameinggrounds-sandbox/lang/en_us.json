@@ -78,5 +78,5 @@
   "tooltip.gameinggrounds-sandbox.drill.1": "Hold §e§l[Shift]§r to read more information.",
   "tooltip.gameinggrounds-sandbox.drill.shift_down": "When crafted, has §e2 / 32§r charges.",
   "tooltip.gameinggrounds-sandbox.drill.shift_down.1": "Use it on §4TNT§r to recharge 1 damage.",
-  "tooltip.sandbox.drill.shift_down.2": "§l2 charges§r are needed per block of bedrock."
+  "tooltip.gameinggrounds-sandbox.drill.shift_down.2": "§l2 charges§r are needed per block of bedrock."
 }
