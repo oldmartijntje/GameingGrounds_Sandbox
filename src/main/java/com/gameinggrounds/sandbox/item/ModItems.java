@@ -1,8 +1,7 @@
 package com.gameinggrounds.sandbox.item;
 
 import com.gameinggrounds.sandbox.GameingGroundsSandbox;
-import com.gameinggrounds.sandbox.item.custom.DrillItem;
-import com.gameinggrounds.sandbox.item.custom.HammerItem;
+import com.gameinggrounds.sandbox.item.custom.*;
 import com.gameinggrounds.sandbox.sound.ModSounds;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
@@ -23,23 +22,23 @@ public class ModItems {
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.IRON, 7, -3.4f))));
 
     public static final Item WOOD_SLIME_SWORD = registerItem("wood_slime_sword",
-            new SwordItem(ToolMaterials.WOOD, new Item.Settings()
+            new WoodSlimeSword(ToolMaterials.WOOD, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.WOOD, 0, -2.4f))));
 
     public static final Item STONE_SLIME_SWORD = registerItem("stone_slime_sword",
-            new SwordItem(ToolMaterials.STONE, new Item.Settings()
+            new StoneSlimeSword(ToolMaterials.STONE, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.STONE, 0, -1.4f))));
 
     public static final Item IRON_SLIME_SWORD = registerItem("iron_slime_sword",
-            new SwordItem(ToolMaterials.IRON, new Item.Settings()
+            new IronSlimeSword(ToolMaterials.IRON, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.IRON, 0, -0.7f))));
 
     public static final Item GOLD_SLIME_SWORD = registerItem("gold_slime_sword",
-            new SwordItem(ToolMaterials.GOLD, new Item.Settings()
+            new GoldSlimeSword(ToolMaterials.GOLD, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.GOLD, 0, -0.4f))));
 
     public static final Item DIAMOND_SLIME_SWORD = registerItem("diamond_slime_sword",
-            new SwordItem(ToolMaterials.DIAMOND, new Item.Settings()
+            new DiamondSlimeSword(ToolMaterials.DIAMOND, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.DIAMOND, 0, -0.1f))));
 
     public static final Item KITSUNE_MAISON_MUSIC_DISC = registerItem("kitsune_maison_music_disc",
