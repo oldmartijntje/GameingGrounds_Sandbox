@@ -1,0 +1,8 @@
+{
+  "asset_id": "gameinggrounds-sandbox:fury",
+  "decal": false,
+  "description": {
+    "translate": "trim_pattern.gameinggrounds-sandbox.fury"
+  },
+  "template_item": "gameinggrounds-sandbox:fury_armor_trim_smithing_template"
+}

@@ -1,0 +1,10 @@
+{
+  "kitsune_maison": {
+    "sounds": [
+      {
+        "name": "gameinggrounds-sandbox:kitsune_maison",
+        "stream": true
+      }
+    ]
+  }
+}

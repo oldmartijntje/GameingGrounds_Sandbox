@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "gameinggrounds-sandbox:item/kitsune_maison_music_disc"
+  }
+}
