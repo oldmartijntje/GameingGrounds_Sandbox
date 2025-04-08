@@ -23,6 +23,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.DRILL, Models.GENERATED);
         itemModelGenerator.register(ModItems.COOL_HAMMER, Models.HANDHELD);
         itemModelGenerator.register(ModItems.KITSUNE_MAISON_MUSIC_DISC, Models.GENERATED);
+        itemModelGenerator.register(ModItems.QUESTIONABLE_SMITHING_TEMPLATE, Models.GENERATED);
 
     }
 }

@@ -1,5 +1,6 @@
 package com.gameinggrounds.sandbox.datagen;
 
+import com.gameinggrounds.sandbox.GameingGroundsSandbox;
 import com.gameinggrounds.sandbox.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
@@ -36,5 +37,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('D', Blocks.OAK_TRAPDOOR)
                 .criterion(hasItem(Blocks.OBSIDIAN), conditionsFromItem(Blocks.OBSIDIAN))
                 .offerTo(recipeExporter);
+
+        offerSmithingTrimRecipe(recipeExporter, ModItems.QUESTIONABLE_SMITHING_TEMPLATE, Identifier.of(GameingGroundsSandbox.MOD_ID, "questionable"));
     }
 }
