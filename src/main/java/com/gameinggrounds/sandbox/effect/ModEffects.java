@@ -17,6 +17,12 @@ public class ModEffects {
                             Identifier.of(GameingGroundsSandbox.MOD_ID, "spleef"), 0,
                             EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
 
+    public static final RegistryEntry<StatusEffect> SPRING = registerStatusEffect("spring",
+            new SpringEffect(StatusEffectCategory.NEUTRAL, 0xc245d3)
+                    .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED,
+                            Identifier.of(GameingGroundsSandbox.MOD_ID, "spring"), 0,
+                            EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
+
 
     private static RegistryEntry<StatusEffect> registerStatusEffect(String name, StatusEffect statusEffect) {
         return Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(GameingGroundsSandbox.MOD_ID, name), statusEffect);
