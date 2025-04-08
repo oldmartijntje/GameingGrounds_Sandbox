@@ -18,6 +18,7 @@ public class ModTrimPatterns {
 
     public static void bootstrap(Registerable<ArmorTrimPattern> context) {
         register(context, ModItems.QUESTIONABLE_SMITHING_TEMPLATE, QUESTIONABLE);
+        register(context, ModItems.FURY_SMITHING_TEMPLATE, QUESTIONABLE);
     }
 
     private static void register(Registerable<ArmorTrimPattern> context, Item item, RegistryKey<ArmorTrimPattern> key) {

@@ -22,6 +22,7 @@ public class ModItemGroups {
 
                         entries.add(ModItems.KITSUNE_MAISON_MUSIC_DISC);
                         entries.add(ModItems.QUESTIONABLE_SMITHING_TEMPLATE);
+                        entries.add(ModItems.FURY_SMITHING_TEMPLATE);
                     })).build());
 
     public static void registerItemGroups() {
