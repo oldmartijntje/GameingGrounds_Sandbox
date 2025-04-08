@@ -88,5 +88,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerNetheriteUpgradeRecipe(recipeExporter, ModItems.DIAMOND_SLIME_SWORD, RecipeCategory.COMBAT, ModItems.NETHERITE_SLIME_SWORD);
 
         offerSmithingTrimRecipe(recipeExporter, ModItems.QUESTIONABLE_SMITHING_TEMPLATE, Identifier.of(GameingGroundsSandbox.MOD_ID, "questionable"));
+        offerSmithingTrimRecipe(recipeExporter, ModItems.FURY_SMITHING_TEMPLATE, Identifier.of(GameingGroundsSandbox.MOD_ID, "fury"));
     }
 }
