@@ -48,6 +48,12 @@
   "item.minecraft.lingering_potion.effect.springy_potion_lv5": "Springy Lingering Potion V",
   "item.minecraft.tipped_arrow.effect.springy_potion_lv5": "Tipped Springy Arrow V",
 
+  "item.gameinggrounds-sandbox.wood_slime_sword": "Wooden Slime Sword",
+  "item.gameinggrounds-sandbox.stone_slime_sword": "Stone Slime Sword",
+  "item.gameinggrounds-sandbox.iron_slime_sword": "Iron Slime Sword",
+  "item.gameinggrounds-sandbox.gold_slime_sword": "Golden Slime Sword",
+  "item.gameinggrounds-sandbox.diamond_slime_sword": "Diamond Slime Sword",
+
   "effect.gameinggrounds-sandbox.spleef": "Spleef",
   "effect.gameinggrounds-sandbox.spring": "Springy",
 

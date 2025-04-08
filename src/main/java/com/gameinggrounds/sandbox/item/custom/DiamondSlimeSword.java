@@ -22,14 +22,14 @@ public class DiamondSlimeSword extends SwordItem {
         float knockbackStrength = 4.5F;
         target.takeKnockback(knockbackStrength, -look.x, -look.z);
         attacker.getWorld()
-                .playSound(
-                        null,
-                        target.getZ(), target.getY(), target.getZ(),
-                        SoundEvents.BLOCK_SLIME_BLOCK_HIT,
-                        SoundCategory.BLOCKS,
-                        1.0F,
-                        1.0F
-                );
+            .playSound(
+                    null,
+                    target.getZ(), target.getY(), target.getZ(),
+                    SoundEvents.BLOCK_SLIME_BLOCK_HIT,
+                    SoundCategory.BLOCKS,
+                    1.0F,
+                    1.0F
+            );
 
         return true;
     }
