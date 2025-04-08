@@ -28,6 +28,13 @@
 
   "itemgroup.gameinggrounds-sandbox.all_items": "GameingGrounds Sandbox Items",
 
+  "painting.gameinggrounds-sandbox.afar.title": "Afar",
+  "painting.gameinggrounds-sandbox.afar.author": "OldMartijntje",
+  "painting.gameinggrounds-sandbox.forgplort.title": "Forg plort",
+  "painting.gameinggrounds-sandbox.forgplort.author": "OldMartijntje",
+  "painting.gameinggrounds-sandbox.psychedelic.title": "Psychedelic",
+  "painting.gameinggrounds-sandbox.psychedelic.author": "OldMartijntje",
+
   "tooltip.gameinggrounds-sandbox.drill": "Use it to remove §lBedrock§r.",
   "tooltip.gameinggrounds-sandbox.drill.1": "Hold §e§l[Shift]§r to read more information.",
   "tooltip.gameinggrounds-sandbox.drill.shift_down": "When crafted, has §e2 / 32§r charges.",
