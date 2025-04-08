@@ -39,7 +39,11 @@ public class ModItems {
 
     public static final Item DIAMOND_SLIME_SWORD = registerItem("diamond_slime_sword",
             new DiamondSlimeSword(ToolMaterials.DIAMOND, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.DIAMOND, 0, -0.1f))));
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.DIAMOND, 0, -0.2f))));
+
+    public static final Item NETHERITE_SLIME_SWORD = registerItem("netherite_slime_sword",
+            new DiamondSlimeSword(ToolMaterials.NETHERITE, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.NETHERITE, 0, -0.0f))));
 
     public static final Item KITSUNE_MAISON_MUSIC_DISC = registerItem("kitsune_maison_music_disc",
             new Item( new Item.Settings().jukeboxPlayable(ModSounds.KITSUNE_MAISON_KEY).maxCount(1)));
