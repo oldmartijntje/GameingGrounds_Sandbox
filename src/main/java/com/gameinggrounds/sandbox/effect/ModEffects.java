@@ -18,7 +18,7 @@ public class ModEffects {
                             EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
 
     public static final RegistryEntry<StatusEffect> SPRING = registerStatusEffect("spring",
-            new SpleefEffect(StatusEffectCategory.NEUTRAL, 0xA1A8A8)
+            new SpleefEffect(StatusEffectCategory.NEUTRAL, 0xc245d3)
                     .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED,
                             Identifier.of(GameingGroundsSandbox.MOD_ID, "spring"), 0,
                             EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));

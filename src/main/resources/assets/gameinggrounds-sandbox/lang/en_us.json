@@ -21,6 +21,9 @@
   "item.minecraft.potion.effect.spleef_potion_netherite": "Netherite Spleef Potion",
   "item.minecraft.splash_potion.effect.spleef_potion_netherite": "Netherite Spleef Splash Potion",
   "item.minecraft.lingering_potion.effect.spleef_potion_netherite": "Netherite Spleef Lingering Potion",
+  "item.minecraft.potion.effect.springy_potion": "Springy Potion",
+  "item.minecraft.splash_potion.effect.springy_potion": "Springy Splash Potion",
+  "item.minecraft.lingering_potion.effect.springy_potion": "Springy Lingering Potion",
 
   "effect.gameinggrounds-sandbox.spleef": "Spleef",
   "effect.gameinggrounds-sandbox.spring": "Springy",

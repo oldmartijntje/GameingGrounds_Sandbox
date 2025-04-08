@@ -65,6 +65,7 @@ public class GameingGroundsSandbox implements ModInitializer {
 			builder.registerPotionRecipe(Potions.AWKWARD, Items.IRON_SHOVEL, ModPotions.SPLEEF_POTION_IRON);
 			builder.registerPotionRecipe(Potions.AWKWARD, Items.DIAMOND_SHOVEL, ModPotions.SPLEEF_POTION_DIAMOND);
 			builder.registerPotionRecipe(Potions.AWKWARD, Items.NETHERITE_SHOVEL, ModPotions.SPLEEF_POTION_NETHERITE);
+			builder.registerPotionRecipe(Potions.AWKWARD, Items.RED_MUSHROOM, ModPotions.SPRINGY_POTION);
 		});
 	}
 }
