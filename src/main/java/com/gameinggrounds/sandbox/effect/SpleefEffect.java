@@ -17,22 +17,22 @@ public class SpleefEffect extends StatusEffect {
     @Override
     public boolean applyUpdateEffect(LivingEntity entity, int amplifier) {
         if (entity.getWorld() instanceof ServerWorld serverWorld) {
-                BlockPos beneathPos = entity.getBlockPos().down();
-                BlockState beneathBlock = serverWorld.getBlockState(beneathPos);
+            BlockPos beneathPos = entity.getBlockPos().down();
+            BlockState beneathBlock = serverWorld.getBlockState(beneathPos);
 
-                if (!beneathBlock.isAir()) {
-                    serverWorld.breakBlock(beneathPos, true);
-                    boolean limitFound = false;
-                    for (int i = 0; i < Math.floor(amplifier / 5f); i++) {
-                        beneathPos = beneathPos.down();
-                        beneathBlock = serverWorld.getBlockState(beneathPos);
-                        if (!beneathBlock.isAir() && !limitFound) {
-                            serverWorld.breakBlock(beneathPos, true);
-                        } else {
-                            limitFound = true;
-                        }
+            if (!beneathBlock.isAir()) {
+                serverWorld.breakBlock(beneathPos, true);
+                boolean limitFound = false;
+                for (int i = 0; i < Math.floor(amplifier / 5f); i++) {
+                    beneathPos = beneathPos.down();
+                    beneathBlock = serverWorld.getBlockState(beneathPos);
+                    if (!beneathBlock.isAir() && !limitFound) {
+                        serverWorld.breakBlock(beneathPos, true);
+                    } else {
+                        limitFound = true;
                     }
                 }
+            }
         }
 
         return super.applyUpdateEffect(entity, amplifier);

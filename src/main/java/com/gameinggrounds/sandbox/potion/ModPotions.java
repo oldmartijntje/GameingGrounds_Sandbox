@@ -20,6 +20,16 @@ public class ModPotions {
             new Potion(new StatusEffectInstance(ModEffects.SPLEEF, 1200, 11)));
     public static final RegistryEntry<Potion> SPLEEF_POTION_NETHERITE = registerPotion("spleef_potion_netherite",
             new Potion(new StatusEffectInstance(ModEffects.SPLEEF, 1200, 100)));
+    public static final RegistryEntry<Potion> SPRINGY_POTION = registerPotion("springy_potion",
+            new Potion(new StatusEffectInstance(ModEffects.SPRING, 1200, 0)));
+    public static final RegistryEntry<Potion> SPRINGY_POTION_LV2 = registerPotion("springy_potion_lv2",
+            new Potion(new StatusEffectInstance(ModEffects.SPRING, 1200, 1)));
+    public static final RegistryEntry<Potion> SPRINGY_POTION_LV3 = registerPotion("springy_potion_lv3",
+            new Potion(new StatusEffectInstance(ModEffects.SPRING, 1200, 3)));
+    public static final RegistryEntry<Potion> SPRINGY_POTION_LV4 = registerPotion("springy_potion_lv4",
+            new Potion(new StatusEffectInstance(ModEffects.SPRING, 1200, 6)));
+    public static final RegistryEntry<Potion> SPRINGY_POTION_LV5 = registerPotion("springy_potion_lv5",
+            new Potion(new StatusEffectInstance(ModEffects.SPRING, 1200, 10)));
 
     private static RegistryEntry<Potion> registerPotion(String name, Potion potion) {
         return Registry.registerReference(Registries.POTION, Identifier.of(GameingGroundsSandbox.MOD_ID, name), potion);

@@ -22,7 +22,33 @@
   "item.minecraft.splash_potion.effect.spleef_potion_netherite": "Netherite Spleef Splash Potion",
   "item.minecraft.lingering_potion.effect.spleef_potion_netherite": "Netherite Spleef Lingering Potion",
 
+  "item.minecraft.potion.effect.springy_potion": "Springy Potion",
+  "item.minecraft.splash_potion.effect.springy_potion": "Springy Splash Potion",
+  "item.minecraft.lingering_potion.effect.springy_potion": "Springy Lingering Potion",
+  "item.minecraft.tipped_arrow.effect.springy_potion": "Tipped Springy Arrow",
+
+  "item.minecraft.potion.effect.springy_potion_lv2": "Springy Potion II",
+  "item.minecraft.splash_potion.effect.springy_potion_lv2": "Springy Splash Potion II",
+  "item.minecraft.lingering_potion.effect.springy_potion_lv2": "Springy Lingering Potion II",
+  "item.minecraft.tipped_arrow.effect.springy_potion_lv2": "Tipped Springy Arrow V",
+
+  "item.minecraft.potion.effect.springy_potion_lv3": "Springy Potion III",
+  "item.minecraft.splash_potion.effect.springy_potion_lv3": "Springy Splash Potion III",
+  "item.minecraft.lingering_potion.effect.springy_potion_lv3": "Springy Lingering Potion III",
+  "item.minecraft.tipped_arrow.effect.springy_potion_lv3": "Tipped Springy Arrow V",
+
+  "item.minecraft.potion.effect.springy_potion_lv4": "Springy Potion IV",
+  "item.minecraft.splash_potion.effect.springy_potion_lv4": "Springy Splash Potion IV",
+  "item.minecraft.lingering_potion.effect.springy_potion_lv4": "Springy Lingering Potion IV",
+  "item.minecraft.tipped_arrow.effect.springy_potion_lv4": "Tipped Springy Arrow V",
+
+  "item.minecraft.potion.effect.springy_potion_lv5": "Springy Potion V",
+  "item.minecraft.splash_potion.effect.springy_potion_lv5": "Springy Splash Potion V",
+  "item.minecraft.lingering_potion.effect.springy_potion_lv5": "Springy Lingering Potion V",
+  "item.minecraft.tipped_arrow.effect.springy_potion_lv5": "Tipped Springy Arrow V",
+
   "effect.gameinggrounds-sandbox.spleef": "Spleef",
+  "effect.gameinggrounds-sandbox.spring": "Springy",
 
   "enchantment.gameinggrounds-sandbox.limbo": "Limbo",
 
