@@ -1,6 +1,8 @@
 // VersionName: IronSlimeSword_WithKnockback
 package com.gameinggrounds.sandbox.item.custom;
 
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.ItemStack;
@@ -19,6 +21,9 @@ public class IronSlimeSword extends SwordItem {
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        if (target instanceof LivingEntity) {
+            target.addStatusEffect(new StatusEffectInstance(StatusEffects.OOZING, 100, 1));
+        }
         Vec3d look = attacker.getRotationVec(1.0F);
         float knockbackStrength = 3.3F;
         target.takeKnockback(knockbackStrength, -look.x, -look.z);
