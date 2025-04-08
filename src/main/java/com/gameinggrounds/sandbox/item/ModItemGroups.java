@@ -21,6 +21,7 @@ public class ModItemGroups {
                         entries.add(ModItems.COOL_HAMMER);
 
                         entries.add(ModItems.KITSUNE_MAISON_MUSIC_DISC);
+                        entries.add(ModItems.QUESTIONABLE_SMITHING_TEMPLATE);
                     })).build());
 
     public static void registerItemGroups() {
