@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "gameinggrounds-sandbox:item/fractured_pickaxe"
+  }
+}
