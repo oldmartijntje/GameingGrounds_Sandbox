@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gameinggrounds-sandbox:block/red_sugar_ore"
+  }
+}

@@ -1,7 +1,8 @@
 ﻿{
   "item.gameinggrounds-sandbox.drill": "Bedrock Drill",
+  "item.gameinggrounds-sandbox.red_sugar": "Red Sugar",
 
-  "item.gameinggrounds-sandbox.kitsune_maison_music_disc": "§bMusic Disc",
+  "item.gameinggrounds-sandbox.kitsune_maison_music_disc": "§bMusic Disc §e(Legacy)§r",
   "item.gameinggrounds-sandbox.kitsune_maison_music_disc.desc": "Porter Robinson - Kitsune Maison",
 
   "item.gameinggrounds-sandbox.cool_hammer": "Cool Hammer",
@@ -63,9 +64,13 @@
   "effect.gameinggrounds-sandbox.spleef": "Spleef",
   "effect.gameinggrounds-sandbox.spring": "Springy",
 
+  "block.gameinggrounds-sandbox.red_sugar_ore": "Red Sugar Ore",
+  "block.gameinggrounds-sandbox.red_sugar_deepslate_ore": "Red Sugar Deepslate Ore",
+
   "enchantment.gameinggrounds-sandbox.limbo": "Limbo",
 
   "itemgroup.gameinggrounds-sandbox.all_items": "GameingGrounds Sandbox Items",
+  "itemgroup.gameinggrounds-sandbox.all_blocks": "GameingGrounds Sandbox Blocks",
 
   "painting.gameinggrounds-sandbox.afar.title": "Afar",
   "painting.gameinggrounds-sandbox.afar.author": "OldMartijntje",
@@ -77,6 +82,7 @@
   "trim_pattern.gameinggrounds-sandbox.fury": "Fury Armor Pattern",
   "trim_pattern.gameinggrounds-sandbox.questionable": "Questionable Armor Pattern",
 
+  "tooltip.gameinggrounds-sandbox.red_sugar": "§e25%§r chance of getting §4Regeneration§r.",
   "tooltip.gameinggrounds-sandbox.drill": "Use it to remove §lBedrock§r.",
   "tooltip.gameinggrounds-sandbox.drill.1": "Hold §e§l[Shift]§r to read more information.",
   "tooltip.gameinggrounds-sandbox.drill.shift_down": "When crafted, has §e2 / 32§r charges.",

@@ -1,5 +1,7 @@
 package com.gameinggrounds.sandbox.datagen;
 
+import com.gameinggrounds.sandbox.block.ModBlocks;
+import com.gameinggrounds.sandbox.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
@@ -28,6 +30,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
+        addDrop(ModBlocks.RED_SUGAR_ORE, multipleOreDrops(ModBlocks.RED_SUGAR_ORE, ModItems.RED_SUGAR, 1, 1));
+        addDrop(ModBlocks.RED_SUGAR_DEEPSLATE_ORE, multipleOreDrops(ModBlocks.RED_SUGAR_DEEPSLATE_ORE, ModItems.RED_SUGAR, 1, 2));
     }
 
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {
