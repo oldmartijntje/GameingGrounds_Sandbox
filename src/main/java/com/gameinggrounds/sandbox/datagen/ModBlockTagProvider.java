@@ -1,5 +1,6 @@
 package com.gameinggrounds.sandbox.datagen;
 
+import com.gameinggrounds.sandbox.block.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -14,10 +15,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE);
+        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                .add(ModBlocks.RED_SUGAR_ORE)
+                .add(ModBlocks.RED_SUGAR_DEEPSLATE_ORE);
 
 
-        getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL);
+        getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.RED_SUGAR_ORE)
+                .add(ModBlocks.RED_SUGAR_DEEPSLATE_ORE);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL);
     }

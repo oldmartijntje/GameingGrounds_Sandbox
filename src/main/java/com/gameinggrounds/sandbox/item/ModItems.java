@@ -17,6 +17,17 @@ import java.util.List;
 public class ModItems {
     public static final Item DRILL = registerItem("drill", new DrillItem(new Item.Settings().maxDamage(32)));
 
+    public static final Item RED_SUGAR = registerItem("red_sugar", new Item(new Item.Settings().food(ModFoodComponent.RED_SUGAR)){
+        // this apparently is an anonymous class
+        // here you can expend the class
+
+        @Override
+        public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+            tooltip.add(Text.translatable("tooltip.gameinggrounds-sandbox.red_sugar"));
+            super.appendTooltip(stack, context, tooltip, options);
+        }
+    });
+
     public static final Item COOL_HAMMER = registerItem("cool_hammer",
             new HammerItem(ToolMaterials.IRON, new Item.Settings()
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.IRON, 7, -3.4f))));

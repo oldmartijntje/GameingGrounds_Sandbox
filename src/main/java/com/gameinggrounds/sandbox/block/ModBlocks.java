@@ -18,6 +18,16 @@ public class ModBlocks {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(GameingGroundsSandbox.MOD_ID, name), block);
     }
+
+    public static final Block RED_SUGAR_ORE = registerBlock("red_sugar_ore",
+            new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
+                    AbstractBlock.Settings.create().strength(3f)
+                            .requiresTool()));
+    public static final Block RED_SUGAR_DEEPSLATE_ORE = registerBlock("red_sugar_deepslate_ore",
+            new ExperienceDroppingBlock(UniformIntProvider.create(3, 6),
+                    AbstractBlock.Settings.create().strength(4f)
+                            .sounds(BlockSoundGroup.DEEPSLATE)
+                            .requiresTool()));
     private static void registerBlockItem(String name, Block block) {
         Registry.register(Registries.ITEM, Identifier.of(GameingGroundsSandbox.MOD_ID, name),
                 new BlockItem(block, new Item.Settings()));

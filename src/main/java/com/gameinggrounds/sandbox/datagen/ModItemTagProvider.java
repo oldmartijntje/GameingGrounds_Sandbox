@@ -27,9 +27,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR);
 
         getOrCreateTagBuilder(ItemTags.TRIM_TEMPLATES)
-                .add(ModItems.QUESTIONABLE_SMITHING_TEMPLATE);
-
-        getOrCreateTagBuilder(ItemTags.TRIM_TEMPLATES)
+                .add(ModItems.QUESTIONABLE_SMITHING_TEMPLATE)
                 .add(ModItems.FURY_SMITHING_TEMPLATE);
 
         getOrCreateTagBuilder(ItemTags.TRIM_MATERIALS);
