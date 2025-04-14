@@ -1,0 +1,9 @@
+{
+  "asset_name": "nether_star",
+  "description": {
+    "color": "#D2D7DC",
+    "translate": "trim_material.gameinggrounds-sandbox.nether_star"
+  },
+  "ingredient": "minecraft:nether_star",
+  "item_model_index": 1.0
+}

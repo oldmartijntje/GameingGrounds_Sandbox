@@ -1,0 +1,9 @@
+{
+  "asset_name": "ender_pearl",
+  "description": {
+    "color": "#032620",
+    "translate": "trim_material.gameinggrounds-sandbox.ender_pearl"
+  },
+  "ingredient": "minecraft:ender_pearl",
+  "item_model_index": 1.0
+}

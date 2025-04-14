@@ -1,0 +1,9 @@
+{
+  "asset_name": "slime_ball",
+  "description": {
+    "color": "#84CD7A",
+    "translate": "trim_material.gameinggrounds-sandbox.slime_ball"
+  },
+  "ingredient": "minecraft:slime_ball",
+  "item_model_index": 1.0
+}

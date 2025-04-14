@@ -30,8 +30,13 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.QUESTIONABLE_SMITHING_TEMPLATE)
                 .add(ModItems.FURY_SMITHING_TEMPLATE);
 
-        getOrCreateTagBuilder(ItemTags.TRIM_MATERIALS);
+        getOrCreateTagBuilder(ItemTags.TRIM_MATERIALS)
+                .add(Items.ECHO_SHARD)
+                .add(Items.HONEYCOMB)
+                .add(Items.FIRE_CHARGE)
+                .add(Items.SLIME_BALL)
+                .add(Items.NETHER_STAR)
+                .add(Items.ENDER_PEARL);
 
-        getOrCreateTagBuilder(ItemTags.TRIM_TEMPLATES);
     }
 }

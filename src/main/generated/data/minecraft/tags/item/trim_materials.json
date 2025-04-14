@@ -1,3 +1,10 @@
 {
-  "values": []
+  "values": [
+    "minecraft:echo_shard",
+    "minecraft:honeycomb",
+    "minecraft:fire_charge",
+    "minecraft:slime_ball",
+    "minecraft:nether_star",
+    "minecraft:ender_pearl"
+  ]
 }

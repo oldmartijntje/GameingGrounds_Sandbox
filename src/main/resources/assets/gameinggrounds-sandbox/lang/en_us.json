@@ -81,6 +81,12 @@
 
   "trim_pattern.gameinggrounds-sandbox.fury": "Fury Armor Pattern",
   "trim_pattern.gameinggrounds-sandbox.questionable": "Questionable Armor Pattern",
+  "trim_material.gameinggrounds-sandbox.echo_shard": "Echo Shard Material",
+  "trim_material.gameinggrounds-sandbox.slime_ball": "Slime Ball Material",
+  "trim_material.gameinggrounds-sandbox.honeycomb": "Honeycomb Material",
+  "trim_material.gameinggrounds-sandbox.fire_charge": "Fire charge Material",
+  "trim_material.gameinggrounds-sandbox.ender_pearl": "Ender Pearl Material",
+  "trim_material.gameinggrounds-sandbox.nether_star": "Nether Star Material",
 
   "tooltip.gameinggrounds-sandbox.red_sugar": "§e25%§r chance of getting §4Regeneration§r.",
   "tooltip.gameinggrounds-sandbox.drill": "Use it to remove §lBedrock§r.",
