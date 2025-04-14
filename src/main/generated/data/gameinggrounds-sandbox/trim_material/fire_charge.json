@@ -1,0 +1,9 @@
+{
+  "asset_name": "fire_charge",
+  "description": {
+    "color": "#D89012",
+    "translate": "trim_material.gameinggrounds-sandbox.fire_charge"
+  },
+  "ingredient": "minecraft:fire_charge",
+  "item_model_index": 1.0
+}

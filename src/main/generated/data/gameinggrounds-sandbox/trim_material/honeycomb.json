@@ -1,0 +1,9 @@
+{
+  "asset_name": "honeycomb",
+  "description": {
+    "color": "#E78C16",
+    "translate": "trim_material.gameinggrounds-sandbox.honeycomb"
+  },
+  "ingredient": "minecraft:honeycomb",
+  "item_model_index": 1.0
+}
