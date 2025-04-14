@@ -93,6 +93,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(recipeExporter);
         offerNetheriteUpgradeRecipe(recipeExporter, ModItems.DIAMOND_SLIME_SWORD, RecipeCategory.COMBAT, ModItems.NETHERITE_SLIME_SWORD);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.FRACTURED_PICKAXE, 1)
+                .pattern("CTC")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('T', Items.TNT)
+                .input('C', Items.CRYING_OBSIDIAN)
+                .input('S', Items.STICK)
+                .criterion(hasItem(Items.SLIME_BALL), conditionsFromItem(Items.TNT))
+                .offerTo(recipeExporter);
+
         offerSmithingTrimRecipe(recipeExporter, ModItems.QUESTIONABLE_SMITHING_TEMPLATE, Identifier.of(GameingGroundsSandbox.MOD_ID, "questionable"));
         offerSmithingTrimRecipe(recipeExporter, ModItems.FURY_SMITHING_TEMPLATE, Identifier.of(GameingGroundsSandbox.MOD_ID, "fury"));
     }
