@@ -6,16 +6,16 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
-import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 
-public class DiamondSlimeSword extends SwordItem {
-    public DiamondSlimeSword(ToolMaterial material, Settings settings) {
+public class SlimeSword extends SwordItem {
+    float knockbackStrength;
+    public SlimeSword(ToolMaterial material, Settings settings, float knockbackStrength) {
         super(material, settings);
         settings.maxDamage(0);
+        this.knockbackStrength = knockbackStrength;
     }
 
     @Override
@@ -24,17 +24,16 @@ public class DiamondSlimeSword extends SwordItem {
             target.addStatusEffect(new StatusEffectInstance(StatusEffects.OOZING, 100, 1));
         }
         Vec3d look = attacker.getRotationVec(1.0F);
-        float knockbackStrength = 4.5F;
-        target.takeKnockback(knockbackStrength, -look.x, -look.z);
+        target.takeKnockback(this.knockbackStrength, -look.x, -look.z);
         attacker.getWorld()
-            .playSound(
-                    null,
-                    target.getZ(), target.getY(), target.getZ(),
-                    SoundEvents.BLOCK_SLIME_BLOCK_HIT,
-                    SoundCategory.BLOCKS,
-                    1.0F,
-                    1.0F
-            );
+                .playSound(
+                        null,
+                        target.getZ(), target.getY(), target.getZ(),
+                        SoundEvents.BLOCK_SLIME_BLOCK_HIT,
+                        SoundCategory.BLOCKS,
+                        1.0F,
+                        1.0F
+                );
 
         return true;
     }

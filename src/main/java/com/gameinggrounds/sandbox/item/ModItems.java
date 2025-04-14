@@ -33,28 +33,34 @@ public class ModItems {
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.IRON, 7, -3.4f))));
 
     public static final Item WOOD_SLIME_SWORD = registerItem("wood_slime_sword",
-            new WoodSlimeSword(ToolMaterials.WOOD, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.WOOD, 0, -2.4f))));
+            new SlimeSword(ToolMaterials.WOOD, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.WOOD, 0, -2.4f)),
+                    1.5F));
 
     public static final Item STONE_SLIME_SWORD = registerItem("stone_slime_sword",
-            new StoneSlimeSword(ToolMaterials.STONE, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.STONE, 0, -1.4f))));
+            new SlimeSword(ToolMaterials.STONE, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.STONE, 0, -1.4f)),
+                    2.1f));
 
     public static final Item IRON_SLIME_SWORD = registerItem("iron_slime_sword",
-            new IronSlimeSword(ToolMaterials.IRON, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.IRON, 0, -0.7f))));
+            new SlimeSword(ToolMaterials.IRON, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.IRON, 0, -0.7f)),
+                    3.3f));
 
     public static final Item GOLD_SLIME_SWORD = registerItem("gold_slime_sword",
-            new GoldSlimeSword(ToolMaterials.GOLD, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.GOLD, 0, -0.4f))));
+            new SlimeSword(ToolMaterials.GOLD, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.GOLD, 0, -0.4f)),
+                    3.5f));
 
     public static final Item DIAMOND_SLIME_SWORD = registerItem("diamond_slime_sword",
-            new DiamondSlimeSword(ToolMaterials.DIAMOND, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.DIAMOND, 0, -0.2f))));
+            new SlimeSword(ToolMaterials.DIAMOND, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.DIAMOND, 0, -0.2f)),
+                    4.5f));
 
     public static final Item NETHERITE_SLIME_SWORD = registerItem("netherite_slime_sword",
-            new DiamondSlimeSword(ToolMaterials.NETHERITE, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.NETHERITE, 0, -0.0f))));
+            new SlimeSword(ToolMaterials.NETHERITE, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.NETHERITE, 0, -0.0f)),
+                    5.3f));
 
     public static final Item KITSUNE_MAISON_MUSIC_DISC = registerItem("kitsune_maison_music_disc",
             new Item( new Item.Settings().jukeboxPlayable(ModSounds.KITSUNE_MAISON_KEY).maxCount(1)));
@@ -70,7 +76,7 @@ public class ModItems {
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.NETHERITE, 7, -0.1f))));
 
     public static final Item BROKEN_FRACTURED_PICKAXE = registerItem("broken_fractured_pickaxe",
-            new BrokenFracturedPickaxe(new Item.Settings()
+            new Item(new Item.Settings()
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.NETHERITE, 7, -0.1f))));
 
 
