@@ -1,8 +1,10 @@
 package com.gameinggrounds.sandbox.util;
+import com.gameinggrounds.sandbox.item.custom.FracturedPickaxeItem;
 import com.gameinggrounds.sandbox.item.custom.HammerItem;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -36,7 +38,6 @@ public class HammerUsageEvent implements PlayerBlockBreakEvents.Before {
                 HARVESTED_BLOCKS.remove(position);
             }
         }
-
         return true;
     }
 }

@@ -54,6 +54,15 @@ public class ModItems {
     public static final Item FURY_SMITHING_TEMPLATE = registerItem("fury_armor_trim_smithing_template",
             SmithingTemplateItem.of(Identifier.of(GameingGroundsSandbox.MOD_ID, "fury"), FeatureFlags.VANILLA));
 
+    public static final Item FRACTURED_PICKAXE = registerItem("fractured_pickaxe",
+            new FracturedPickaxeItem(ToolMaterials.NETHERITE, new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.NETHERITE, 7, -0.1f))));
+
+    public static final Item BROKEN_FRACTURED_PICKAXE = registerItem("broken_fractured_pickaxe",
+            new BrokenFracturedPickaxe(new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.NETHERITE, 7, -0.1f))));
+
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(GameingGroundsSandbox.MOD_ID, name), item);
     }
