@@ -15,7 +15,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.HashSet;
 import java.util.Set;
 
-public class HammerUsageEvent implements PlayerBlockBreakEvents.Before {
+public class FracturedPickaxeUsageEvent implements PlayerBlockBreakEvents.Before {
     private static final Set<BlockPos> HARVESTED_BLOCKS = new HashSet<>();
 
     @Override
@@ -23,41 +23,24 @@ public class HammerUsageEvent implements PlayerBlockBreakEvents.Before {
                                     BlockState state, @Nullable BlockEntity blockEntity) {
         ItemStack mainHandItem = player.getMainHandStack();
 
-        if(mainHandItem.getItem() instanceof HammerItem hammer && player instanceof ServerPlayerEntity serverPlayer) {
-            if(HARVESTED_BLOCKS.contains(pos)) {
-                return true;
-            }
-
-            for(BlockPos position : HammerItem.getBlocksToBeDestroyed(1, pos, serverPlayer)) {
-                if(pos == position || !hammer.isCorrectForDrops(mainHandItem, world.getBlockState(position))) {
-                    continue;
-                }
-
-                HARVESTED_BLOCKS.add(position);
-                serverPlayer.interactionManager.tryBreakBlock(position);
-                HARVESTED_BLOCKS.remove(position);
-            }
-        } else if(mainHandItem.getItem() instanceof FracturedPickaxeItem && player instanceof ServerPlayerEntity serverPlayer) {
+        if(mainHandItem.getItem() instanceof FracturedPickaxeItem && player instanceof ServerPlayerEntity serverPlayer) {
             if(HARVESTED_BLOCKS.contains(pos)) {
                 return true;
             }
 
             if(FracturedPickaxeItem.will_explode(pos, serverPlayer)){
                 BlockPos blockPos = serverPlayer.getBlockPos();
-                world.createExplosion(
-                        serverPlayer,
+                serverPlayer.getServerWorld().createExplosion(
+                        null,
                         blockPos.getX(),
                         blockPos.getY(),
                         blockPos.getZ(),
-                        3.0f,
-                        World.ExplosionSourceType.TRIGGER
+                        70.0f,
+                        true,
+                        World.ExplosionSourceType.MOB
                 );
-                ItemStack droppedItem = new ItemStack(state.getBlock().asItem());
+                ItemStack droppedItem = new ItemStack(state.getBlock().asItem(), 5);
                 ItemEntity itemEntity = new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), droppedItem);
-                world.spawnEntity(itemEntity);
-                world.spawnEntity(itemEntity);
-                world.spawnEntity(itemEntity);
-                world.spawnEntity(itemEntity);
                 world.spawnEntity(itemEntity);
             } else {
                 ItemStack droppedItem = new ItemStack(state.getBlock().asItem());

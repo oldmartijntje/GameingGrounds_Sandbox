@@ -31,6 +31,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.GOLD_SLIME_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.DIAMOND_SLIME_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.NETHERITE_SLIME_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.FRACTURED_PICKAXE, Models.HANDHELD);
 
     }
 }
