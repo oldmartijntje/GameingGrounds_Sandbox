@@ -1,16 +1,19 @@
 package com.gameinggrounds.sandbox.util;
 import com.gameinggrounds.sandbox.component.ModDataComponentTypes;
+import com.gameinggrounds.sandbox.item.ModItems;
 import com.gameinggrounds.sandbox.item.custom.FracturedPickaxeItem;
 import com.gameinggrounds.sandbox.item.custom.HammerItem;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.ItemEntity;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraft.world.explosion.Explosion;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.HashSet;
@@ -30,7 +33,7 @@ public class FracturedPickaxeUsageEvent implements PlayerBlockBreakEvents.Before
         counter++;
         mainHandItem.set(ModDataComponentTypes.COUNTER, counter);
         if (mainHandItem.get(ModDataComponentTypes.MAXVALUE) == null){
-            int randomNum = new Random().nextInt(100) + 1;
+            int randomNum = new Random().nextInt(250) + 1;
             System.out.println("Setting MAXVALUE to: " + randomNum);
             mainHandItem.set(ModDataComponentTypes.MAXVALUE, randomNum);
         } else {
@@ -50,7 +53,7 @@ public class FracturedPickaxeUsageEvent implements PlayerBlockBreakEvents.Before
 
             if(FracturedPickaxeItem.will_explode(mainHandItem)){
                 BlockPos blockPos = serverPlayer.getBlockPos();
-                serverPlayer.getServerWorld().createExplosion(
+                Explosion explosion = serverPlayer.getServerWorld().createExplosion(
                     serverPlayer,
                     blockPos.getX(),
                     blockPos.getY(),
@@ -59,9 +62,11 @@ public class FracturedPickaxeUsageEvent implements PlayerBlockBreakEvents.Before
                     true,
                     World.ExplosionSourceType.MOB
                 );
+                serverPlayer.damage(serverPlayer.getDamageSources().explosion(explosion), 30.0f);
                 ItemStack droppedItem = new ItemStack(state.getBlock().asItem(), 5);
                 ItemEntity itemEntity = new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), droppedItem);
                 world.spawnEntity(itemEntity);
+                serverPlayer.getInventory().setStack(serverPlayer.getInventory().selectedSlot, new ItemStack(ModItems.BROKEN_FRACTURED_PICKAXE));
             } else {
                 ItemStack droppedItem = new ItemStack(state.getBlock().asItem());
                 ItemEntity itemEntity = new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), droppedItem);

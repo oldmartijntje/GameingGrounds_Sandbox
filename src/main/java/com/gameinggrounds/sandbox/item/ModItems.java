@@ -58,6 +58,10 @@ public class ModItems {
             new FracturedPickaxeItem(ToolMaterials.NETHERITE, new Item.Settings()
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.NETHERITE, 7, -0.1f))));
 
+    public static final Item BROKEN_FRACTURED_PICKAXE = registerItem("broken_fractured_pickaxe",
+            new BrokenFracturedPickaxe(new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.NETHERITE, 7, -0.1f))));
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(GameingGroundsSandbox.MOD_ID, name), item);

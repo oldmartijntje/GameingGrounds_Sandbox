@@ -100,8 +100,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('T', Items.TNT)
                 .input('C', Items.CRYING_OBSIDIAN)
                 .input('S', Items.STICK)
-                .criterion(hasItem(Items.SLIME_BALL), conditionsFromItem(Items.TNT))
+                .criterion(hasItem(Items.TNT), conditionsFromItem(Items.TNT))
                 .offerTo(recipeExporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.FRACTURED_PICKAXE, 1)
+            .input(ModItems.BROKEN_FRACTURED_PICKAXE)
+            .input(Items.CRYING_OBSIDIAN)
+            .input(Items.TNT)
+            .criterion(hasItem(Items.CRYING_OBSIDIAN), conditionsFromItem(Items.CRYING_OBSIDIAN))
+            .offerTo(recipeExporter, "fractured_pickaxe_repair");
 
         offerSmithingTrimRecipe(recipeExporter, ModItems.QUESTIONABLE_SMITHING_TEMPLATE, Identifier.of(GameingGroundsSandbox.MOD_ID, "questionable"));
         offerSmithingTrimRecipe(recipeExporter, ModItems.FURY_SMITHING_TEMPLATE, Identifier.of(GameingGroundsSandbox.MOD_ID, "fury"));

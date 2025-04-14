@@ -26,6 +26,7 @@ public class ModItemGroups {
                         entries.add(ModItems.DIAMOND_SLIME_SWORD);
                         entries.add(ModItems.NETHERITE_SLIME_SWORD);
                         entries.add(ModItems.FRACTURED_PICKAXE);
+                        entries.add(ModItems.BROKEN_FRACTURED_PICKAXE);
 
                         entries.add(ModItems.KITSUNE_MAISON_MUSIC_DISC);
                         entries.add(ModItems.QUESTIONABLE_SMITHING_TEMPLATE);
