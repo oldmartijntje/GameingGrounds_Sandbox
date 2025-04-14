@@ -13,7 +13,10 @@ import java.util.function.UnaryOperator;
 public class ModDataComponentTypes {
     public static final ComponentType<BlockPos> COORDINATES = register("coordinates", builder -> builder.codec(BlockPos.CODEC));
     public static final Codec<Integer> INT_CODEC = Codec.INT;
+    public static final Codec<Boolean> BOOLEAN = Codec.BOOL;
     public static final ComponentType<Integer> COUNTER = register("counter", builder -> builder.codec(INT_CODEC));
+    public static final ComponentType<Integer> MAXVALUE = register("maxvalue", builder -> builder.codec(INT_CODEC));
+    public static final ComponentType<Boolean> TRIGGEREVENT = register("triggerevent", builder -> builder.codec(BOOLEAN));
 
     private static <T>ComponentType<T> register(String name, UnaryOperator<ComponentType.Builder<T>> builderOperator) {
         return Registry.register(Registries.DATA_COMPONENT_TYPE, Identifier.of(GameingGroundsSandbox.MOD_ID, name),

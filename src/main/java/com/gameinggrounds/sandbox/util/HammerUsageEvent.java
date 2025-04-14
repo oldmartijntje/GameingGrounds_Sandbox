@@ -37,37 +37,7 @@ public class HammerUsageEvent implements PlayerBlockBreakEvents.Before {
                 serverPlayer.interactionManager.tryBreakBlock(position);
                 HARVESTED_BLOCKS.remove(position);
             }
-        } else if(mainHandItem.getItem() instanceof FracturedPickaxeItem && player instanceof ServerPlayerEntity serverPlayer) {
-            if(HARVESTED_BLOCKS.contains(pos)) {
-                return true;
-            }
-
-            if(FracturedPickaxeItem.will_explode(pos, serverPlayer)){
-                BlockPos blockPos = serverPlayer.getBlockPos();
-                world.createExplosion(
-                        serverPlayer,
-                        blockPos.getX(),
-                        blockPos.getY(),
-                        blockPos.getZ(),
-                        3.0f,
-                        World.ExplosionSourceType.TRIGGER
-                );
-                ItemStack droppedItem = new ItemStack(state.getBlock().asItem());
-                ItemEntity itemEntity = new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), droppedItem);
-                world.spawnEntity(itemEntity);
-                world.spawnEntity(itemEntity);
-                world.spawnEntity(itemEntity);
-                world.spawnEntity(itemEntity);
-                world.spawnEntity(itemEntity);
-            } else {
-                ItemStack droppedItem = new ItemStack(state.getBlock().asItem());
-                ItemEntity itemEntity = new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), droppedItem);
-                world.spawnEntity(itemEntity);
-                BlockPos blockPos = serverPlayer.getBlockPos();
-                HARVESTED_BLOCKS.add(pos);
-            }
         }
-
         return true;
     }
 }

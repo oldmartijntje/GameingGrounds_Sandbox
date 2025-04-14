@@ -28,7 +28,7 @@ public class FracturedPickaxeUsageEvent implements PlayerBlockBreakEvents.Before
                 return true;
             }
 
-            if(FracturedPickaxeItem.will_explode(pos, serverPlayer)){
+            if(FracturedPickaxeItem.will_explode(mainHandItem)){
                 BlockPos blockPos = serverPlayer.getBlockPos();
                 serverPlayer.getServerWorld().createExplosion(
                         null,

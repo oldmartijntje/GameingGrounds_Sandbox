@@ -7,6 +7,7 @@ import com.gameinggrounds.sandbox.enchantment.ModEnchantmentEffects;
 import com.gameinggrounds.sandbox.item.ModItemGroups;
 import com.gameinggrounds.sandbox.item.ModItems;
 import com.gameinggrounds.sandbox.potion.ModPotions;
+import com.gameinggrounds.sandbox.util.FracturedPickaxeUsageEvent;
 import com.gameinggrounds.sandbox.util.HammerUsageEvent;
 import com.gameinggrounds.sandbox.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
@@ -47,6 +48,7 @@ public class GameingGroundsSandbox implements ModInitializer {
 		ModDataComponentTypes.registerDataComponentTypes();
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
+		PlayerBlockBreakEvents.BEFORE.register(new FracturedPickaxeUsageEvent());
 
 		AttackEntityCallback.EVENT.register((playerEntity, world, hand, entity, entityHitResult) -> {
 			if(entity instanceof SheepEntity sheepEntity && !world.isClient()) {
