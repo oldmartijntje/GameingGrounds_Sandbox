@@ -71,6 +71,10 @@ public class ModItems {
     public static final Item FURY_SMITHING_TEMPLATE = registerItem("fury_armor_trim_smithing_template",
             SmithingTemplateItem.of(Identifier.of(GameingGroundsSandbox.MOD_ID, "fury"), FeatureFlags.VANILLA));
 
+
+    public static final Item TRADING_CARD_PACK = registerItem("trading_card_pack",
+            new TradingCardPack( new Item.Settings().maxCount(32)));
+
     public static final Item FRACTURED_PICKAXE = registerItem("fractured_pickaxe",
             new FracturedPickaxeItem(ToolMaterials.NETHERITE, new Item.Settings()
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.NETHERITE, 7, -0.1f))));

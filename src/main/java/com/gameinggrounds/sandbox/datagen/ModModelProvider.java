@@ -2,6 +2,7 @@ package com.gameinggrounds.sandbox.datagen;
 
 import com.gameinggrounds.sandbox.block.ModBlocks;
 import com.gameinggrounds.sandbox.item.ModItems;
+import com.gameinggrounds.sandbox.item.custom.TradingCardsCreator;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.*;
@@ -36,5 +37,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.NETHERITE_SLIME_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.FRACTURED_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.BROKEN_FRACTURED_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.TRADING_CARD_PACK, Models.HANDHELD);
+
+        TradingCardsCreator.RegisterModModels(itemModelGenerator);
     }
 }

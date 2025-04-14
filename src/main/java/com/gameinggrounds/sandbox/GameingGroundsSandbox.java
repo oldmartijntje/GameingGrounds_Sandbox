@@ -6,6 +6,7 @@ import com.gameinggrounds.sandbox.effect.ModEffects;
 import com.gameinggrounds.sandbox.enchantment.ModEnchantmentEffects;
 import com.gameinggrounds.sandbox.item.ModItemGroups;
 import com.gameinggrounds.sandbox.item.ModItems;
+import com.gameinggrounds.sandbox.item.custom.TradingCardsCreator;
 import com.gameinggrounds.sandbox.potion.ModPotions;
 import com.gameinggrounds.sandbox.util.FracturedPickaxeUsageEvent;
 import com.gameinggrounds.sandbox.util.HammerUsageEvent;
@@ -14,9 +15,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
-import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
-import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.passive.SheepEntity;
@@ -37,6 +36,7 @@ public class GameingGroundsSandbox implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 
 		ModItems.registerModItems();
+		TradingCardsCreator.registerModItems();
 		ModBlocks.registerModBlocks();
 
 		ModEffects.registerEffects();

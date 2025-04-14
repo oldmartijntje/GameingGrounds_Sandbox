@@ -18,6 +18,7 @@ public class ModItemGroups {
                     .entries(((displayContext, entries) -> {
 
                         entries.add(ModItems.DRILL);
+                        entries.add(ModItems.TRADING_CARD_PACK);
 
                         entries.add(ModItems.COOL_HAMMER);
                         entries.add(ModItems.RED_SUGAR);
