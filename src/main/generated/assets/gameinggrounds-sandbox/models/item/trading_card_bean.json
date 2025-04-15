@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "gameinggrounds-sandbox:item/trading_card_bean"
+  }
+}

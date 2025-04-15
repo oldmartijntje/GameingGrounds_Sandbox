@@ -1,5 +1,6 @@
 package com.gameinggrounds.sandbox.item.custom;
 
+import com.gameinggrounds.sandbox.component.ModDataComponentTypes;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -19,12 +20,10 @@ public class TradingCardPack extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if (!world.isClient()) {
-            System.out.println("used card pack");
             List<Integer> cardPackCards = Arrays.asList(0,0,0,0,1,1,1,2);
             for (int i = 0; i < cardPackCards.size(); i++) {
-                Item itemToGive = Items.DIAMOND_SHOVEL;
-                if (itemToGive != null) {
-                    ItemStack stack = new ItemStack(itemToGive, 1);
+                ItemStack stack = TradingCardsCreator.getItemBasedRarity(cardPackCards.get(i));
+                if (stack != null) {
                     if (!user.getInventory().insertStack(stack)) {
                         // If inventory is full, drop the item at the player's location
                         user.dropItem(stack, false);

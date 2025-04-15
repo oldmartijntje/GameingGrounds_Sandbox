@@ -1,4 +1,5 @@
 ﻿{
+  "item.gameinggrounds-sandbox.trading_card": "Trading Card",
   "item.gameinggrounds-sandbox.drill": "Bedrock Drill",
   "item.gameinggrounds-sandbox.red_sugar": "Red Sugar",
 
@@ -87,6 +88,14 @@
   "trim_material.gameinggrounds-sandbox.fire_charge": "Fire charge Material",
   "trim_material.gameinggrounds-sandbox.ender_pearl": "Ender Pearl Material",
   "trim_material.gameinggrounds-sandbox.nether_star": "Nether Star Material",
+
+  "tooltip.gameinggrounds-sandbox.trading_card.rarity": "Rarity",
+  "tooltip.gameinggrounds-sandbox.trading_card.rarity.common": "Common",
+  "tooltip.gameinggrounds-sandbox.trading_card.rarity.uncommon": "Uncommon",
+  "tooltip.gameinggrounds-sandbox.trading_card.rarity.rare": "Rare",
+  "tooltip.gameinggrounds-sandbox.trading_card.rarity.epic": "Epic",
+  "tooltip.gameinggrounds-sandbox.trading_card.rarity.legendary": "Legendary",
+  "tooltip.gameinggrounds-sandbox.trading_card.rarity.none": "This card is not obtained in a legit way.",
 
   "tooltip.gameinggrounds-sandbox.red_sugar": "§e25%§r chance of getting §4Regeneration§r.",
   "tooltip.gameinggrounds-sandbox.drill": "Use it to remove §lBedrock§r.",
