@@ -47,13 +47,13 @@ public class TradingCardsCreator {
     public static ItemStack getItemBasedRarity(Integer baseRarity) {
         int rando = (int)(Math.random() * 100);
         int extraRarity = 0;
-        if (rando > 90) {
+        if (rando >= 99) {
             extraRarity = 4;
-        } else if (rando > 75) {
+        } else if (rando >= 96) {
             extraRarity = 3;
-        } else if (rando > 55) {
+        } else if (rando >= 90) {
             extraRarity = 2;
-        } else if (rando > 30) {
+        } else if (rando >= 80) {
             extraRarity = 1;
         }
         Integer rarity = Math.max(extraRarity, baseRarity);
@@ -67,9 +67,16 @@ public class TradingCardsCreator {
 
     private static void registerTradingCard(String registerNameOffset, Integer minRarity) {
         Item tradingCard = registerItem("trading_card_" + registerNameOffset,
-                new TradingCard(new Item.Settings().maxCount(16)));
+                new TradingCard(new Item.Settings().maxCount(16), capitalizeFirst(registerNameOffset)));
 
         ALL_TRADING_CARDS.computeIfAbsent(minRarity, k -> new ArrayList<>()).add(tradingCard);
+    }
+
+    public static String capitalizeFirst(String input) {
+        if (input == null || input.isEmpty()) {
+            return input;
+        }
+        return input.substring(0, 1).toUpperCase() + input.substring(1);
     }
 
     private static Item registerItem(String name, Item item) {

@@ -25,8 +25,10 @@ import java.util.HashMap;
 import java.util.List;
 
 public class TradingCard extends Item {
-    public TradingCard(Settings settings) {
+    private String cardName = "";
+    public TradingCard(Settings settings, String cardName) {
         super(settings);
+        this.cardName = cardName;
     }
 
     private Formatting getRarityFormatting(Integer rarity) {
@@ -57,20 +59,27 @@ public class TradingCard extends Item {
 
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType options) {
+        tooltip.add(Text.literal(String.format("%s - ", this.cardName)).append(Text.translatable("tooltip.gameinggrounds-sandbox.trading_card")));
         if (Screen.hasShiftDown()) {
-            tooltip.add(Text.translatable("tooltip.gameinggrounds-sandbox.drill"));
-            tooltip.add(Text.translatable("tooltip.gameinggrounds-sandbox.drill.shift_down"));
-            tooltip.add(Text.translatable("tooltip.gameinggrounds-sandbox.drill.shift_down.1"));
-            tooltip.add(Text.translatable("tooltip.gameinggrounds-sandbox.drill.shift_down.2"));
+            if (stack.get(ModDataComponentTypes.RARITY) != null) {
+                Integer rarity = stack.get(ModDataComponentTypes.RARITY);
+                Formatting color = getRarityFormatting(rarity);
+                tooltip.add(Text.translatable("tooltip.gameinggrounds-sandbox.trading_card.rarity").append(Text.translatable("tooltip.gameinggrounds-sandbox.trading_card.rarity." + rarity).styled(style -> style.withColor(color))));
+            } else {
+                tooltip.add(Text.translatable("tooltip.gameinggrounds-sandbox.trading_card.rarity.none").styled(style -> style.withColor(Formatting.RED)));
+            }
+            tooltip.add(Text.translatable("tooltip.gameinggrounds-sandbox.trading_card.shift_down.1"));
+            tooltip.add(Text.translatable("tooltip.gameinggrounds-sandbox.trading_card.shift_down.2"));
 
+            if (stack.get(ModDataComponentTypes.DISCOVERED_BY) != null) {
+                String playerName = stack.get(ModDataComponentTypes.DISCOVERED_BY).playerName();
+                tooltip.add(Text.translatable("tooltip.gameinggrounds-sandbox.trading_card.shift_down.owner").append(String.format("§5%s", playerName)));
+            }
         } else {
-            tooltip.add(Text.translatable("tooltip.gameinggrounds-sandbox.drill"));
-            tooltip.add(Text.translatable("tooltip.gameinggrounds-sandbox.drill.1"));
+            tooltip.add(Text.translatable("tooltip.gameinggrounds-sandbox.trading_card.1"));
         }
 
-        if (stack.get(ModDataComponentTypes.RARITY) != null) {
-            tooltip.add(Text.literal("Last Block Used at "));
-        }
+
 
         super.appendTooltip(stack, context, tooltip, options);
     }
