@@ -2,7 +2,7 @@ package com.gameinggrounds.sandbox.item.custom;
 
 import com.gameinggrounds.sandbox.GameingGroundsSandbox;
 import com.gameinggrounds.sandbox.component.ModDataComponentTypes;
-import com.gameinggrounds.sandbox.item.ModItems;
+import com.gameinggrounds.sandbox.util.Models.TradingCardData;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
@@ -60,7 +60,8 @@ public class TradingCardsCreator {
 
         Item item = getRandomItem(ALL_TRADING_CARDS.get(baseRarity));
         ItemStack stack = new ItemStack(item, 1);
-        stack.set(ModDataComponentTypes.RARITY, rarity);
+        TradingCardData data = new TradingCardData(false, rarity, 0);
+        stack.set(ModDataComponentTypes.TRADING_CARD_DATA, data);
 
         return stack;
     }
