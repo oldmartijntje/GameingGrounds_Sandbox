@@ -98,11 +98,18 @@
   "tooltip.gameinggrounds-sandbox.trading_card.rarity.4": "Legendary",
   "tooltip.gameinggrounds-sandbox.trading_card.rarity.none": "This card is not obtained in a legit way.",
 
+  "tooltip.gameinggrounds-sandbox.trading_card.condition": "Condition: ",
+  "tooltip.gameinggrounds-sandbox.trading_card.condition.0": "Mint",
+  "tooltip.gameinggrounds-sandbox.trading_card.condition.1": "Near-Mint",
+  "tooltip.gameinggrounds-sandbox.trading_card.condition.2": "Played",
+  "tooltip.gameinggrounds-sandbox.trading_card.condition.3": "Worn",
+  "tooltip.gameinggrounds-sandbox.trading_card.condition.4": "Damaged",
+
   "tooltip.gameinggrounds-sandbox.trading_card": "Trading Card",
   "tooltip.gameinggrounds-sandbox.trading_card.1": "Hold §e§l[Shift]§r to read more information.",
   "tooltip.gameinggrounds-sandbox.trading_card.shift_down": "",
-  "tooltip.gameinggrounds-sandbox.trading_card.shift_down.1": "",
-  "tooltip.gameinggrounds-sandbox.trading_card.shift_down.2": "",
+  "tooltip.gameinggrounds-sandbox.trading_card.shift_down.sleeve.none": "Card has no §6Card Sleeve§r applied.",
+  "tooltip.gameinggrounds-sandbox.trading_card.shift_down.sleeve.has": "Card is §2protected§r with a §6Card Sleeve",
   "tooltip.gameinggrounds-sandbox.trading_card.shift_down.owner": "Card is discovered by: ",
 
   "tooltip.gameinggrounds-sandbox.red_sugar": "§e25%§r chance of getting §4Regeneration§r.",
