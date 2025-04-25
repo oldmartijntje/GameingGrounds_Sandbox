@@ -2,6 +2,8 @@ package com.gameinggrounds.sandbox.item.custom;
 
 import com.gameinggrounds.sandbox.GameingGroundsSandbox;
 import com.gameinggrounds.sandbox.component.ModDataComponentTypes;
+import com.gameinggrounds.sandbox.util.Models.TradingCardAbilities.TradingCardAbility;
+import com.gameinggrounds.sandbox.util.Models.TradingCardAbilities.TradingCardHealAbility;
 import com.gameinggrounds.sandbox.util.Models.TradingCardData;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.data.client.ItemModelGenerator;
@@ -16,19 +18,21 @@ import net.minecraft.util.Identifier;
 import java.util.*;
 
 public class TradingCardsCreator {
+    private static final int MAX_RARITY = 4;
     private static final Map<Integer, List<Item>> ALL_TRADING_CARDS = new HashMap<>();
 
     static {
+        TradingCardAbility ABILITY_LESS = new TradingCardAbility();
         // Generate all trading cards at class load time
-        registerTradingCard("steve", 0);
-        registerTradingCard("alex", 1);
-        registerTradingCard("bean", 0);
-        registerTradingCard("duck", 0);
-        registerTradingCard("heat", 3);
-        registerTradingCard("life", 3);
-        registerTradingCard("spiney", 1);
-        registerTradingCard("stabby", 2);
-        registerTradingCard("wet", 1);
+        registerTradingCard("steve", 0, ABILITY_LESS);
+        registerTradingCard("alex", 1, ABILITY_LESS);
+        registerTradingCard("bean", 0, ABILITY_LESS);
+        registerTradingCard("duck", 0, ABILITY_LESS);
+        registerTradingCard("heat", 3, ABILITY_LESS);
+        registerTradingCard("life", 3, new TradingCardHealAbility());
+        registerTradingCard("spiney", 1, ABILITY_LESS);
+        registerTradingCard("stabby", 2, ABILITY_LESS);
+        registerTradingCard("wet", 1, ABILITY_LESS);
     }
 
     public static void registerModModels(ItemModelGenerator itemModelGenerator) {
@@ -58,7 +62,7 @@ public class TradingCardsCreator {
         }
         Integer rarity = Math.max(extraRarity, baseRarity);
 
-        Item item = getRandomItem(ALL_TRADING_CARDS.get(baseRarity));
+        Item item = getRandomItem(ALL_TRADING_CARDS.get(rarity));
         ItemStack stack = new ItemStack(item, 1);
         TradingCardData data = new TradingCardData(false, rarity, 0);
         stack.set(ModDataComponentTypes.TRADING_CARD_DATA, data);
@@ -66,11 +70,14 @@ public class TradingCardsCreator {
         return stack;
     }
 
-    private static void registerTradingCard(String registerNameOffset, Integer minRarity) {
-        Item tradingCard = registerItem("trading_card_" + registerNameOffset,
-                new TradingCard(new Item.Settings().maxCount(16), capitalizeFirst(registerNameOffset)));
 
-        ALL_TRADING_CARDS.computeIfAbsent(minRarity, k -> new ArrayList<>()).add(tradingCard);
+    private static void registerTradingCard(String registerNameOffset, Integer minRarity, TradingCardAbility ability) {
+        Item tradingCard = registerItem("trading_card_" + registerNameOffset,
+                new TradingCard(new Item.Settings().maxCount(16), capitalizeFirst(registerNameOffset), ability));
+
+        for (int rarity = minRarity; rarity <= MAX_RARITY; rarity++) {
+            ALL_TRADING_CARDS.computeIfAbsent(rarity, k -> new ArrayList<>()).add(tradingCard);
+        }
     }
 
     public static String capitalizeFirst(String input) {

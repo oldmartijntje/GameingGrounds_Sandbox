@@ -1,22 +1,29 @@
 package com.gameinggrounds.sandbox.item.custom;
 
 import com.gameinggrounds.sandbox.component.ModDataComponentTypes;
+import com.gameinggrounds.sandbox.util.Models.TradingCardAbilities.TradingCardAbility;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Hand;
+import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
 import java.util.List;
 
 public class TradingCard extends Item {
     private String cardName = "";
-    public TradingCard(Settings settings, String cardName) {
+    private TradingCardAbility ability;
+    public TradingCard(Settings settings, String cardName, TradingCardAbility ability) {
         super(settings);
         this.cardName = cardName;
+        this.ability = ability;
     }
 
     private Formatting getRarityFormatting(Integer rarity) {
@@ -65,6 +72,10 @@ public class TradingCard extends Item {
                 .styled(style -> style.withColor(Formatting.DARK_GRAY))
                 .append(Text.translatable("tooltip.gameinggrounds-sandbox.trading_card")
                         .styled(style -> style.withColor(Formatting.DARK_GRAY))));
+        if (this.ability.showAbillityTooltip()) {
+            World world = MinecraftClient.getInstance().world;
+            tooltip.add(this.ability.getAbilityCooldown(world, stack).formatting());
+        }
         if (Screen.hasShiftDown()) {
             if (stack.get(ModDataComponentTypes.TRADING_CARD_DATA) != null) {
                 Integer rarity = stack.get(ModDataComponentTypes.TRADING_CARD_DATA).rarity();
@@ -99,6 +110,18 @@ public class TradingCard extends Item {
         } else {
             tooltip.add(Text.translatable("tooltip.gameinggrounds-sandbox.trading_card.1"));
         }
+        if (this.ability.showAbillityTooltip()) {
+            if (Screen.hasControlDown()) {
+                tooltip.add(Text.translatable("tooltip.gameinggrounds-sandbox.trading_card.ability")
+                        .styled(style -> style.withColor(Formatting.DARK_GRAY)));
+                for (Text line : this.ability.getAbilityDescription()) {
+                    tooltip.add(line);
+                }
+            } else {
+                tooltip.add(Text.translatable("tooltip.gameinggrounds-sandbox.trading_card.2"));
+            }
+        }
+
 
 
 
@@ -106,9 +129,14 @@ public class TradingCard extends Item {
     }
 
     @Override
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        return this.ability.triggerAbility(world, user, hand);
+    }
+
+    @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if (!world.isClient()) {
-            // cooldown etc
+
         }
         super.inventoryTick(stack, world, entity, slot, selected);
     }
