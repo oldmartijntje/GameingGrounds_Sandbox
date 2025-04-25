@@ -24,6 +24,10 @@ public class TradingCardPack extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if (!world.isClient()) {
+            if (!user.isCreative()) {
+                ItemStack heldStack = user.getMainHandStack();
+                heldStack.setCount(heldStack.getCount() - 1);
+            }
             List<Integer> cardPackCards = Arrays.asList(0,0,0,0,1,1,1,2);
             for (int i = 0; i < cardPackCards.size(); i++) {
                 ItemStack stack = TradingCardsCreator.getItemBasedRarity(cardPackCards.get(i));
