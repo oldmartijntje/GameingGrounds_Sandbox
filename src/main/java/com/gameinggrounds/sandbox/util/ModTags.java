@@ -15,7 +15,7 @@ public class ModTags {
     }
 
     public static class Items {
-        public static final TagKey<Item> TRANSFORMABLE_ITEMS = createTag("transformable_items");
+        public static final TagKey<Item> TRADING_CARDS = createTag("trading_cards");
 
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(GameingGroundsSandbox.MOD_ID, name));

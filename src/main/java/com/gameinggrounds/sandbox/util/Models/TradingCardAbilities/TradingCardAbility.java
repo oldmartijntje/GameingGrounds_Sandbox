@@ -1,6 +1,7 @@
 package com.gameinggrounds.sandbox.util.Models.TradingCardAbilities;
 
 import com.gameinggrounds.sandbox.component.ModDataComponentTypes;
+import com.gameinggrounds.sandbox.util.Models.TradingCardData;
 import com.gameinggrounds.sandbox.util.dto.AbilityTimeObject;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -64,5 +65,19 @@ public class TradingCardAbility {
     public void hasUsedAbility(ItemStack stack, World world) {
         long now = world.getTime();
         stack.set(ModDataComponentTypes.LAST_CARD_USE, now);
+        if (stack.get(ModDataComponentTypes.TRADING_CARD_DATA) != null) {
+            TradingCardData data = stack.get(ModDataComponentTypes.TRADING_CARD_DATA);
+            if (!data.has_card_sleeve()) {
+                int rando = (int)(Math.random() * 100);
+                if (rando >= 74 + stack.getCount()) {
+                    Integer damage = data.condition() + 1;
+                    if (damage > 4) {
+                        damage = 4;
+                    }
+                    TradingCardData newData = data.copyData(null, null, damage);
+                    stack.set(ModDataComponentTypes.TRADING_CARD_DATA, newData);
+                }
+            }
+        }
     }
 }
