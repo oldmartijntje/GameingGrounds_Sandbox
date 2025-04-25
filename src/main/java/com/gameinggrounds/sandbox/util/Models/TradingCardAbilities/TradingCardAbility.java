@@ -26,6 +26,13 @@ public class TradingCardAbility {
     }
 
     public boolean haveTicksPassed(ItemStack stack, World world, Long ticks) {
+        return haveTicksPassed(stack, world, ticks, 0);
+    }
+
+    public boolean haveTicksPassed(ItemStack stack, World world, Long ticks, int gamemode) {
+        if (gamemode == 1) {
+            return true;
+        }
         if (stack.get(ModDataComponentTypes.LAST_CARD_USE) != null) {
             Long cooldown = stack.get(ModDataComponentTypes.LAST_CARD_USE);
             long now = world.getTime();
