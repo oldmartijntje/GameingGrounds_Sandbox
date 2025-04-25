@@ -1,6 +1,6 @@
 ﻿{
   "item.gameinggrounds-sandbox.trading_card": "Trading Card",
-  "item.gameinggrounds-sandbox.trading_card_duck": "Trading Card",
+  "item.gameinggrounds-sandbox.trading_card_pack": "Trading Card Pack",
   "item.gameinggrounds-sandbox.drill": "Bedrock Drill",
   "item.gameinggrounds-sandbox.red_sugar": "Red Sugar",
 
@@ -73,6 +73,7 @@
 
   "itemgroup.gameinggrounds-sandbox.all_items": "GameingGrounds Sandbox Items",
   "itemgroup.gameinggrounds-sandbox.all_blocks": "GameingGrounds Sandbox Blocks",
+  "itemgroup.gameinggrounds-sandbox.trading_cards": "GameingGrounds Trading Cards",
 
   "painting.gameinggrounds-sandbox.afar.title": "Afar",
   "painting.gameinggrounds-sandbox.afar.author": "OldMartijntje",

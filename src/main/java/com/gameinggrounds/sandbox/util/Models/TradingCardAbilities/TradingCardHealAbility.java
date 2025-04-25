@@ -53,8 +53,8 @@ public class TradingCardHealAbility extends TradingCardAbility {
                     if (i == j && i == skipWhenBoth) {
                         continue;
                     }
-                    double offsetX = i - (double) loop1 / 4 + Math.random() / 2 - 0.25;
-                    double offsetZ = j - (double) loop2 / 4 + Math.random() / 2 - 0.25;
+                    double offsetX = i - 0.5 + Math.random() / 2 - 0.25;
+                    double offsetZ = j - 0.5 + Math.random() / 2 - 0.25;
                     double offsetY = 0 + ((double) amount / 100);
 
                     double x = position.getX() + offsetX;

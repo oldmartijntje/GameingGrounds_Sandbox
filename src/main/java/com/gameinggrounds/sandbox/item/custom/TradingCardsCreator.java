@@ -20,33 +20,38 @@ import java.util.*;
 public class TradingCardsCreator {
     private static final int MAX_RARITY = 4;
     private static final Map<Integer, List<Item>> ALL_TRADING_CARDS = new HashMap<>();
+    private static final List<Item> ALL_CARDS_LIST = new ArrayList<>();
 
     static {
         TradingCardAbility ABILITY_LESS = new TradingCardAbility();
         // Generate all trading cards at class load time
         registerTradingCard("steve", 0, ABILITY_LESS);
-        registerTradingCard("alex", 1, ABILITY_LESS);
-        registerTradingCard("bean", 0, ABILITY_LESS);
-        registerTradingCard("duck", 0, ABILITY_LESS);
+        registerTradingCard("alex", 0, ABILITY_LESS);
+        registerTradingCard("bean", 4, ABILITY_LESS);
+        registerTradingCard("duck", 1, ABILITY_LESS);
         registerTradingCard("heat", 3, ABILITY_LESS);
-        registerTradingCard("life", 3, new TradingCardHealAbility());
-        registerTradingCard("spiney", 1, ABILITY_LESS);
-        registerTradingCard("stabby", 2, ABILITY_LESS);
-        registerTradingCard("wet", 1, ABILITY_LESS);
+        registerTradingCard("life", 4, new TradingCardHealAbility());
+        registerTradingCard("spiney", 2, ABILITY_LESS);
+        registerTradingCard("stabby", 1, ABILITY_LESS);
+        registerTradingCard("wet", 0, ABILITY_LESS);
     }
 
     public static void registerModModels(ItemModelGenerator itemModelGenerator) {
-        for (List<Item> itemList : ALL_TRADING_CARDS.values()) {
-            for (Item item : itemList) {
-                itemModelGenerator.register(item, Models.GENERATED);
-            }
+        for (Item item : ALL_CARDS_LIST) {
+            itemModelGenerator.register(item, Models.GENERATED);
         }
+    }
+
+    public static List<Item> getPlayingCardsList() {
+        return ALL_CARDS_LIST;
     }
 
     private static Item getRandomItem(List<Item> items) {
         Random random = new Random();
         return items.get(random.nextInt(items.size()));
     }
+
+
 
     public static ItemStack getItemBasedRarity(Integer baseRarity) {
         int rando = (int)(Math.random() * 100);
@@ -74,6 +79,8 @@ public class TradingCardsCreator {
     private static void registerTradingCard(String registerNameOffset, Integer minRarity, TradingCardAbility ability) {
         Item tradingCard = registerItem("trading_card_" + registerNameOffset,
                 new TradingCard(new Item.Settings().maxCount(16), capitalizeFirst(registerNameOffset), ability));
+
+        ALL_CARDS_LIST.add(tradingCard);
 
         for (int rarity = minRarity; rarity <= MAX_RARITY; rarity++) {
             ALL_TRADING_CARDS.computeIfAbsent(rarity, k -> new ArrayList<>()).add(tradingCard);
