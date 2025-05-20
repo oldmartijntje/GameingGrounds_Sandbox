@@ -11,6 +11,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.particle.BlockStateParticleEffect;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
@@ -51,6 +53,9 @@ public class DrillItem extends Item {
                         item -> context.getPlayer().sendEquipmentBreakStatus(item, EquipmentSlot.MAINHAND));
 
                 world.playSound(null, context.getBlockPos(), SoundEvents.BLOCK_GRINDSTONE_USE, SoundCategory.BLOCKS);
+                ((ServerWorld) world).spawnParticles(new BlockStateParticleEffect(ParticleTypes.BLOCK, clickedBlock.getDefaultState()),
+                        context.getBlockPos().getX() + 0.5, context.getBlockPos().getY() + 1,
+                        context.getBlockPos().getZ()+0.5, 5, 0, 0, 0, 1);
                 context.getStack().set(ModDataComponentTypes.COORDINATES, context.getBlockPos());
             } else if (clickedBlock == Blocks.TNT) {
                 world.setBlockState(context.getBlockPos(), Blocks.AIR.getDefaultState());
@@ -59,6 +64,9 @@ public class DrillItem extends Item {
                             item -> context.getPlayer().sendEquipmentBreakStatus(item, EquipmentSlot.MAINHAND));
                 }
                 world.playSound(null, context.getBlockPos(), SoundEvents.BLOCK_COMPOSTER_FILL, SoundCategory.BLOCKS);
+                ((ServerWorld) world).spawnParticles(new BlockStateParticleEffect(ParticleTypes.BLOCK, clickedBlock.getDefaultState()),
+                        context.getBlockPos().getX() + 0.5, context.getBlockPos().getY() + 1,
+                        context.getBlockPos().getZ()+0.5, 5, 0, 0, 0, 1);
                 context.getStack().set(ModDataComponentTypes.COORDINATES, context.getBlockPos());
             }
         }
