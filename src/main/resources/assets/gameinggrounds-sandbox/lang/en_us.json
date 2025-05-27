@@ -113,6 +113,9 @@
   "tooltip.gameinggrounds-sandbox.trading_card.ability.tooltip.heal.1": "§7It heals you §41hp§r",
   "tooltip.gameinggrounds-sandbox.trading_card.ability.tooltip.heal.2": "§7This effect will stack if you have multiple in 1 slot.",
 
+  "tooltip.gameinggrounds-sandbox.trading_card_pack": "",
+  "tooltip.gameinggrounds-sandbox.trading_card_pack.lucky": "Lucky ",
+
   "tooltip.gameinggrounds-sandbox.trading_card": "Trading Card",
   "tooltip.gameinggrounds-sandbox.trading_card.1": "Hold §e§l[Shift]§r to read more information.",
   "tooltip.gameinggrounds-sandbox.trading_card.2": "Hold §e§l[Control]§r to read ability info.",

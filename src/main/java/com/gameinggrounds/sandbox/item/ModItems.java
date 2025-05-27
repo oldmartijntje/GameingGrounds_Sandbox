@@ -73,7 +73,13 @@ public class ModItems {
 
 
     public static final Item TRADING_CARD_PACK = registerItem("trading_card_pack",
-            new TradingCardPack( new Item.Settings().maxCount(32)));
+            new TradingCardPack( new Item.Settings().maxCount(32), 0));
+    public static final Item GOLD_TRADING_CARD_PACK = registerItem("gold_trading_card_pack",
+            new TradingCardPack( new Item.Settings().maxCount(32), 1));
+    public static final Item DIAMOND_TRADING_CARD_PACK = registerItem("diamond_trading_card_pack",
+            new TradingCardPack( new Item.Settings().maxCount(32), 2));
+    public static final Item OBSIDIAN_TRADING_CARD_PACK = registerItem("obsidian_trading_card_pack",
+            new TradingCardPack( new Item.Settings().maxCount(32), 3));
 
     public static final Item FRACTURED_PICKAXE = registerItem("fractured_pickaxe",
             new FracturedPickaxeItem(ToolMaterials.NETHERITE, new Item.Settings()

@@ -24,6 +24,9 @@ public class ModItemGroups {
 
                         entries.add(ModItems.DRILL);
                         entries.add(ModItems.TRADING_CARD_PACK);
+                        entries.add(ModItems.GOLD_TRADING_CARD_PACK);
+                        entries.add(ModItems.DIAMOND_TRADING_CARD_PACK);
+                        entries.add(ModItems.OBSIDIAN_TRADING_CARD_PACK);
 
                         entries.add(ModItems.COOL_HAMMER);
                         entries.add(ModItems.RED_SUGAR);

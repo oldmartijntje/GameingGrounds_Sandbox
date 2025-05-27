@@ -38,6 +38,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.FRACTURED_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.BROKEN_FRACTURED_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.TRADING_CARD_PACK, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.GOLD_TRADING_CARD_PACK, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.DIAMOND_TRADING_CARD_PACK, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.OBSIDIAN_TRADING_CARD_PACK, Models.HANDHELD);
 
         TradingCardsCreator.registerModModels(itemModelGenerator);
     }
